@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorila Roots - Centro Deportivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body class="bg-slate-900 text-white">
+    <!-- Header -->
+    <header class="relative z-50 bg-slate-900/95 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-slate-900 font-bold text-2xl"><img src="assets/images/logo.png" alt="Gorila Roots Logo"></span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#nosotros" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+                        Sobre Nosotros
+                    </a>
+                    <a href="#profesores" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+                        Profesores
+                    </a>
+                    <a href="#actividades" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+                        Actividades
+                    </a>
+                    <a href="#horarios" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+                        Horarios
+                    </a>
+                    <a href="#contacto" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+                        Contacto
+                    </a>
+                </nav>
+
+                <!-- Social Icons & Mobile Menu Button -->
+                <div class="flex items-center space-x-3 border">
+                    <a href="mailto:info@gorilaroots.com" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                        <i class="fas fa-envelope text-white"></i>
+                    </a>
+                        <a href="https://wa.me/1234567890" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                    
+                        <a href="https://www.instagram.com" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-colors">
+                        <i class="fas fa-bars text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-full bg-slate-900 z-40 md:hidden">
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <button id="close-menu" class="absolute top-6 right-6 w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-times text-white"></i>
+                </button>
+                
+                <a href="#nosotros" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                    Sobre Nosotros
+                </a>
+                <a href="#profesores" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                    Profesores
+                </a>
+                <a href="#actividades" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                    Actividades
+                </a>
+                <a href="#horarios" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                    Horarios
+                </a>
+                <a href="#contacto" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--! HERO SECCION -->
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-4xl mx-auto text-center space-y-12">
+                <!-- Main titulo -->
+                <div class="space-y-6">
+                    <h1 class="gorila-text text-6xl md:text-8xl font-bold text-red-600 tracking-wider fade-in">
+                        GORILA ROOTS
+                    </h1>
+
+                    <h2 class="text-2xl md:text-4xl font-bold text-white leading-tight fade-in fade-in-delay-1">
+                        ENTRENAMOS CUERPO, MENTE<br>
+                        Y ESPÍRITU DE LUCHA.
+                    </h2>
+                </div>
+
+                <!-- Texto HERO -->
+                <div class="space-y-8 fade-in fade-in-delay-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">CENTRO DEPORTIVO:</h3>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                        <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">Jiu Jitsu</span>
+                        </div>
+
+                        <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">No-Gi</span>
+                        </div>
+
+                        <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">Boxeo</span>
+                        </div>
+
+                        <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
+                            <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">Físico</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- boton de contacto -->
+                <div class="pt-8 fade-in fade-in-delay-3">
+                    <button id="contact-btn" class="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        CONTÁCTANOS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner HERO -->
+    <section class="bg-red-600 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="space-y-2 group cursor-pointer">
+                    <i class="fas fa-trophy text-4xl text-white group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white">Tomá Una Clase De Prueba</h3>
+                </div>
+
+                <div class="space-y-2 group cursor-pointer">
+                    <i class="fas fa-users text-4xl text-white group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white">Ambos Géneros</h3>
+                </div>
+
+                <div class="space-y-2 group cursor-pointer">
+                    <i class="fas fa-heart text-4xl text-white group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white">Priorizamos El Bienestar</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--!--------------------------------------- -->
+<!-- Sobre Nosotros Section -->
+<section id="nosotros" class="bg-[#050a1f] py-16 relative">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center">
+            <!-- Left Content -->
+            <div class="w-full lg:w-3/5 pr-0 lg:pr-8">
+                <!-- Title -->
+                <h2 class="text-5xl md:text-6xl font-bold mb-12">
+                    <span class="text-white">SOBRE</span> 
+                    <span class="text-red-600">NOSOTROS</span>
+                </h2>
+                
+                <!-- Bullet Points -->
+                <div class="space-y-8 mb-12">
+                    <!-- Point 1 -->
+                    <div class="flex items-start">
+                        <div class="w-6 h-6 bg-red-600 rounded-full shadow-[0_0_15px_6px_rgba(220,38,38,0.6)] mt-1.5"></div>
+                        <p class="text-white text-xl font-medium ml-4">Fundado En 2024.</p>
+                    </div>
+                    
+                    <!-- Point 2 -->
+                    <div class="flex items-start">
+                        <div class="w-6 h-6 rounded-full mt-1.5 bg-red-600 shadow-[0_0_15px_6px_rgba(220,38,38,0.6)]"></div>
+                        <p class="text-white text-xl font-medium ml-4">
+                            Somos Un Centro Deportivo Especializado<br>
+                            En Disciplinas De Combate Y Preparación<br>
+                            Física Integral.
+                        </p>
+                    </div>
+                    
+                    <!-- Point 3 -->
+                    <div class="flex items-start">
+                        <div class="w-6 h-6 bg-red-600 rounded-full shadow-[0_0_15px_6px_rgba(220,38,38,0.6)] mt-1.5"></div>
+                        <div class="text-white text-xl font-medium ml-4">
+                            <p class="mb-4">
+                                Este Proyecto Nace Con La Misión De<br>
+                                Acercar A Las Personas Al Movimiento Y Al<br>
+                                Deporte, Promoviendo Valores Esenciales<br>
+                                Como:
+                            </p>
+                            
+                            <!-- Values -->
+                            <div class="grid grid-cols-2 gap-x-8 gap-y-6 mt-4">
+                                <div>
+                                    <p class="text-white text-xl font-medium ">Superación</p>
+                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-white text-xl font-medium">Confianza</p>
+                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-white text-xl font-medium">Respeto</p>
+                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-white text-xl font-medium">Compañerismo</p>
+                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
+                                </div>
+                                
+                                <div class="col-span-2">
+                                    <p class="text-white text-xl font-medium">Disciplina</p>
+                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Red Box -->
+                <div class="border-2 border-red-600 p-6 mt-8 shadow-[0_0_15px_6px_rgba(220,38,38,0.6)]">
+                    <p class="text-white text-lg">
+                        En Un Espacio Amigable Y Libre De Juicios, Creemos Profundamente Que
+                        Todos Tenemos La Capacidad De Alcanzar Nuestras Metas, Apoyándonos
+                        En La Voluntad Y En La Fuerza De Nuestra Comunidad.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Content - Logo -->
+<div class="w-full lg:w-2/5 mt-12 lg:mt-0 flex justify-center lg:justify-end">
+  <div class="w-[400px] h-[400px] bg-[#0a1433] rounded-full flex items-center justify-center p-2 shadow-[0_0_15px_6px_rgba(220,38,38,0.6)]">
+    <div class="w-full h-full bg-black rounded-full flex items-center justify-center relative">
+      <div class="absolute inset-0 rounded-full border-4 border-white"></div>
+      <img src="assets/images/logoCompleto.jpg"
+           alt="Gorila Roots Logo"
+           class="w-full h-full object-cover rounded-full z-10" />
+    </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Visión y Misión Section -->
+<section id="vision-mision" class="bg-[#050a1f] py-20 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute top-20 left-10 w-96 h-96 bg-blue-600 rounded-full opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-80 h-80 bg-red-600 rounded-full opacity-10 blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-600 rounded-full opacity-5 blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Visión Section -->
+        <div class="mb-20">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Left Content -->
+                <div class="w-full lg:w-3/5 space-y-6">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-2 h-16 bg-red-600"></div>
+                        <h2 class="text-5xl md:text-6xl font-bold text-white">Visión</h2>
+                    </div>
+                    
+                    <div class="space-y-6 text-white">
+                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
+                            Buscamos Ser un referente en el desarrollo físico y 
+                            emocional de las personas.
+                        </p>
+                        
+                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
+                            Queremos lograrlo A través del entrenamiento.
+                        </p>
+                        
+                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
+                            acompañamos un camino hacia la autenticidad, la conexión 
+                            y la superación personal.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="w-full lg:w-2/5 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <img 
+                                src="assets/images/boxing.JPG" 
+                                alt="Entrenamiento de boxeo en Gorila Roots" 
+                                class="w-full h-full object-cover"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-8 bg-red-600 rounded-full opacity-100 blur-[6vh] shadow-xl"></div>
+
+                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-red-600 rounded-full opacity-10 blur-3xl shadow-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Separator -->
+        <div class="flex justify-center mb-20">
+            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
+        </div>
+        
+        <!-- Misión Section -->
+        <div>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Left Image -->
+                <div class="w-full lg:w-2/5 flex justify-center order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <img 
+                                src="/placeholder.svg?height=400&width=400" 
+                                alt="Entrenamiento en equipo en Gorila Roots" 
+                                class="w-full h-full object-cover"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-red-600 rounded-full"></div>
+                        <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-red-600 rounded-full"></div>
+                    </div>
+                </div>
+                
+                <!-- Right Content -->
+                <div class="w-full lg:w-3/5 space-y-6 order-1 lg:order-2">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-2 h-16 bg-red-600"></div>
+                        <h2 class="text-5xl md:text-6xl font-bold text-white">Misión</h2>
+                    </div>
+                    
+                    <div class="space-y-8 text-white">
+                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
+                            El objetivo es formar una comunidad que mediante:
+                        </p>
+                        
+                        <!-- Bullet Points -->
+                        <div class="space-y-4 ml-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+                                <p class="text-xl md:text-2xl font-medium">Las artes de combate</p>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+                                <p class="text-xl md:text-2xl font-medium">El movimiento físico y</p>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
+                                <p class="text-xl md:text-2xl font-medium">El trabajo en equipo,</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
+                            Acompañe a cada persona su propio proceso de 
+                            transformación.
+                        </p>
+                        
+                        <!-- Highlighted Quote -->
+                        <div class="bg-gradient-to-r from-red-600/20 to-transparent p-6 rounded-lg border-l-4 border-red-600 mt-8">
+                            <p class="text-xl md:text-2xl font-bold text-white italic">
+                                "Entrenar es crecer. En Gorila Roots lo hacemos 
+                                juntos, con compromiso, respeto y pasión."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--!--------------FORTALEZAS------------- -->
+    <!-- Features Section -->
+<section class="bg-slate-800 py-16 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-40 h-40 bg-red-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-60 h-60 bg-red-600 rounded-full translate-x-1/3 translate-y-1/3"></div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="text-white">NUESTRAS</span> 
+                <span class="text-red-600">FORTALEZAS</span>
+            </h2>
+            <div class="w-24 h-1 bg-red-600 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-fist-raised text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white text-center mb-3">Técnicas Avanzadas</h3>
+                <p class="text-gray-300 text-center">
+                    Aprende técnicas de combate avanzadas con instructores certificados y experimentados.
+                </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-users text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white text-center mb-3">Comunidad Unida</h3>
+                <p class="text-gray-300 text-center">
+                    Forma parte de una comunidad que te apoya y motiva a superar tus límites cada día.
+                </p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-dumbbell text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white text-center mb-3">Instalaciones Modernas</h3>
+                <p class="text-gray-300 text-center">
+                    Entrena en un espacio equipado con todo lo necesario para maximizar tu rendimiento.
+                </p>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-medal text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white text-center mb-3">Resultados Garantizados</h3>
+                <p class="text-gray-300 text-center">
+                    Programas de entrenamiento personalizados para alcanzar tus objetivos específicos.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="mt-12 text-center">
+            <a href="#clases" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                DESCUBRE NUESTRAS CLASES
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--! SECCION DE VIDEOS -->
+<!-- Actividades Section with Video Loops -->
+<section id="actividades" class="bg-[#050a1f] py-16">
+    <div class="container mx-auto px-4">
+        <!-- Section Title -->
+        <h2 class="text-5xl md:text-6xl font-bold mb-16 text-center">
+            <span class="text-white">NUESTRAS</span> 
+            <span class="text-red-600">ACTIVIDADES</span>
+        </h2>
+        
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Jiu Jitsu Video -->
+            <div class="video-container relative group">
+                <video 
+                    class="w-full h-[450px] object-cover" 
+                    poster="assets/images/jiu-jitsu-poster.jpg" 
+                    autoplay
+                    playsinline
+                    muted 
+                    loop 
+                    preload="none">
+                    <source src="assets/images/videos/Jiu-Jitsu.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Hover Overlay with Text -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                    <h3 class="text-white text-2xl font-bold mb-4 text-center">Jiu Jitsu</h3>
+                    <p class="text-white text-center">
+                        Aprendé Este Apasionante Arte Marcial Basada En Los Principios De Derribar, Controlar Y Someter A Un Oponente Mediante El Uso De Agarres Y Palancas
+                    </p>
+                </div>
+                
+                <!-- Title Always Visible -->
+                <div class="text-center py-3">
+                    <h3 class="text-white text-xl font-bold">Jiu Jitsu</h3>
+                </div>
+            </div>
+            
+            <!-- No-Gi Video -->
+            <div class="video-container relative group">
+ <video 
+  class="w-full h-[450px] object-cover" 
+  poster="assets/images/no-gi-poster.jpg" 
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  preload="auto">
+  <source src="assets/images/videos/No-Gi.mp4" type="video/mp4">
+</video>
+                
+                <!-- Hover Overlay with Text -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                    <h3 class="text-white text-2xl font-bold mb-4 text-center">No-Gi</h3>
+                    <p class="text-white text-center">
+                        Compartiendo los mismos principios del Jiu-Jitsu, encontrá otra manera de aplicar técnicas de control, sin el uso del kimono 
+                    </p>
+                </div>
+                
+                <!-- Title Always Visible -->
+                <div class="text-center py-3">
+                    <h3 class="text-white text-xl font-bold">No-Gi</h3>
+                </div>
+            </div>
+            
+            <!-- Boxeo Video -->
+            <div class="video-container relative group">
+                <video 
+                    class="w-full h-[450px] object-cover" 
+                    poster="assets/images/boxeo-poster.jpg" 
+                    autoplay
+                    playsinline
+                    muted 
+                    loop 
+                    preload="none">
+                    <source src="assets/images/videos/Boxeo.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Hover Overlay with Text -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                    <h3 class="text-white text-2xl font-bold mb-4 text-center">Boxeo</h3>
+                    <p class="text-white text-center">
+                        Vení a moverte y conocer las bases de este popular deporte de combate. Trabajar los fundamentos del arte de boxear
+                    </p>
+                </div>
+                
+                <!-- Title Always Visible -->
+                <div class="text-center py-3">
+                    <h3 class="text-white text-xl font-bold">Boxeo</h3>
+                </div>
+            </div>
+            
+            <!-- Entrenamiento Físico Video -->
+            <div class="video-container relative group">
+                <video 
+                    class="w-full h-[450px] object-cover" 
+                    poster="assets/images/fisico-poster.jpg" 
+                    autoplay
+                    playsinline
+                    muted 
+                    loop 
+                    preload="none">
+                    <source src="assets/images/videos/Entrenamiento-Fisico.mp4" type="video/mp4">
+                </video>
+                
+                <!-- Hover Overlay with Text -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
+                    <h3 class="text-white text-2xl font-bold mb-4 text-center">Ent. Físico</h3>
+                    <p class="text-white text-center">
+                        Encontrá un lugar donde vas a entrenar todo tu cuerpo y con total adaptabilidad. Nos adaptamos a vos y a tus objetivos
+                    </p>
+                </div>
+                
+                <!-- Title Always Visible -->
+                <div class="text-center py-3">
+                    <h3 class="text-white text-xl font-bold">Ent. Físico</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--!---------------------------------------PROFESORES------------------------->
+<!-- Profesores Section - Dos Profesores Centrados -->
+<section id="profesores" class="bg-[#050a1f] py-20 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 to-transparent"></div>
+        <div class="absolute top-20 right-20 w-72 h-72 bg-red-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 bg-blue-600 rounded-full opacity-5 blur-3xl"></div>
+    </div>
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-600 rounded-full"></div>
+        <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-2 h-2 bg-white rounded-full"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <div class="w-16 h-1 bg-red-600"></div>
+                <h2 class="text-5xl md:text-6xl font-bold">
+                    <span class="text-white">NUESTROS</span> 
+                    <span class="text-red-600">PROFESORES</span>
+                </h2>
+                <div class="w-16 h-1 bg-red-600"></div>
+            </div>
+            <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                Conocé a nuestro equipo de instructores expertos, cada uno especializado en diferentes disciplinas 
+                y comprometido con tu crecimiento personal y deportivo.
+            </p>
+        </div>
+        
+        <!-- Profesores Grid - Centrado con 2 columnas -->
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
+                <!-- Profesor 1 -->
+                <div class="group relative">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
+                        <!-- Image Container -->
+                        <div class="relative mb-6">
+                            <div class="w-full h-full bg-slate-700 rounded-xl overflow-hidden relative">
+                                <!-- Placeholder for image -->
+                                <div class="w-full h-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
+                                    <div class="text-slate-400 text-center">
+                                        <img src="assets/images/PrimerProfe.JPG" class="object-cover" alt="">
+                                    </div>
+                                </div>
+                                <!-- Overlay effect -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <!-- Decorative corner -->
+                            <div class="absolute -top-2 -right-2 w-12 h-12 bg-red-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"> <img src="assets/images/logo.png" alt=""></div>
+                        </div>
+                        
+                        <!-- Professor Info -->
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                                Gabriel Giménez
+                            </h3>
+                            <div class="space-y-3">
+                                <p class="text-red-600 font-semibold text-lg">Faixa Preta 3er Grau</p>
+                                <p class="text-gray-400">Director técnico FAB</p>
+                            </div>
+                            <div class="pt-3">
+                                <div class="w-16 h-0.5 bg-red-600 mx-auto group-hover:w-24 transition-all duration-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profesor 2 -->
+                <div class="group relative">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
+                        <!-- Image Container -->
+                        <div class="relative mb-6">
+                            <div class="w-full h-full bg-slate-700 rounded-xl overflow-hidden relative">
+                                <!-- Placeholder for image -->
+                                <div class="w-full h-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
+                                    <div class="text-slate-400 text-center">
+                                        <img src="assets/images/SegundoProfe.JPG"  alt="">
+                                    </div>
+                                </div>
+                                <!-- Overlay effect -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <!-- Decorative corner -->
+                            <div class="absolute -top-2 -right-2 w-12 h-12 bg-red-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"> <img src="assets/images/logo.png" alt=""></div>
+                        </div>
+                        
+                        <!-- Professor Info -->
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">
+                                Darío Romero
+                            </h3>
+                            <div class="space-y-3">
+                                <p class="text-red-600 font-semibold text-lg">Faixa Roxa</p>
+                                <p class="text-gray-400">Entrenador</p>
+                            </div>
+                            <div class="pt-3">
+                                <div class="w-16 h-0.5 bg-red-600 mx-auto group-hover:w-24 transition-all duration-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="text-center mt-16">
+            <p class="text-gray-300 text-lg mb-6">
+                ¿Querés conocer más sobre nuestros instructores y sus metodologías de entrenamiento?
+            </p>
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                CONOCÉ AL EQUIPO
+            </button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- JavaScript -->
+    <script src="src/main.js"></script>
+</body>
+</html>
