@@ -5,86 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gorila Roots - Centro Deportivo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="bg-slate-900 text-white">
-    <!-- Header -->
-    <header class="relative z-50 bg-slate-900/95 backdrop-blur-sm">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                        <span class="text-slate-900 font-bold text-2xl"><img src="assets/images/logo.png" alt="Gorila Roots Logo"></span>
-                    </div>
+<!-- Header -->
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                    <img src="assets/images/logo.png" alt="Gorila Roots Logo" class="w-8 h-8 object-contain">
                 </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#nosotros" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-                        Sobre Nosotros
-                    </a>
-                    <a href="#profesores" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-                        Profesores
-                    </a>
-                    <a href="#actividades" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-                        Actividades
-                    </a>
-                    <a href="#horarios" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-                        Horarios
-                    </a>
-                    <a href="#contacto" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-                        Contacto
-                    </a>
-                </nav>
-
-                <!-- Social Icons & Mobile Menu Button -->
-                <div class="flex items-center space-x-3 border">
-                    <a href="mailto:info@gorilaroots.com" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
-                        <i class="fas fa-envelope text-white"></i>
-                    </a>
-                        <a href="https://wa.me/1234567890" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors">
-                            <i class="fab fa-whatsapp text-white"></i>
-                        </a>
-                    
-                        <a href="https://www.instagram.com" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors">
-                            <i class="fab fa-whatsapp text-white"></i>
-                        </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-colors">
-                        <i class="fas fa-bars text-white"></i>
-                    </button>
-                </div>
+                <span class="text-white font-bold text-xl hidden sm:block">GORILA ROOTS</span>
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-full bg-slate-900 z-40 md:hidden">
-            <div class="flex flex-col items-center justify-center h-full space-y-8">
-                <button id="close-menu" class="absolute top-6 right-6 w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-times text-white"></i>
-                </button>
-                
-                <a href="#nosotros" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#nosotros" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Sobre Nosotros
                 </a>
-                <a href="#profesores" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                <a href="#profesores" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Profesores
                 </a>
-                <a href="#actividades" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                <a href="#actividades" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Actividades
                 </a>
-                <a href="#horarios" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                <a href="#horarios" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Horarios
                 </a>
-                <a href="#contacto" class="text-white text-xl font-medium hover:text-red-400 transition-colors mobile-menu-link">
+                <a href="#contacto" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Contacto
                 </a>
+            </nav>
+
+            <!-- Social Icons & Mobile Menu Button -->
+            <div class="flex items-center space-x-3">
+                <a href="mailto:info@gorilaroots.com" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-envelope text-white"></i>
+                </a>
+                <a href="https://wa.me/1234567890" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-whatsapp text-white"></i>
+                </a>
+                <a href="https://www.instagram.com" class="w-10 h-10 bg-purple-500 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-instagram text-white"></i>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
             </div>
         </div>
-    </header>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-screen bg-slate-900/95 backdrop-blur-md z-40 md:hidden transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 relative">
+            <button id="close-menu" class="absolute top-6 right-6 w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300">
+                <i class="fas fa-times text-white"></i>
+            </button>
+            
+            <a href="#nosotros" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
+                Sobre Nosotros
+            </a>
+            <a href="#profesores" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
+                Profesores
+            </a>
+            <a href="#actividades" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
+                Actividades
+            </a>
+            <a href="#horarios" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
+                Horarios
+            </a>
+            <a href="#contacto" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
+                Contacto
+            </a>
+        </div>
+    </div>
+</header>
+
 
     <!--! HERO SECCION -->
     <section class="hero-bg min-h-screen flex items-center relative">
@@ -168,7 +169,7 @@
             </div>
         </div>
     </section>
-<!--!--------------------------------------- -->
+<!--!--------------------------------------- SOBRE NOSOTROS SECCION-->
 <!-- Sobre Nosotros Section -->
 <section id="nosotros" class="bg-[#050a1f] py-16 relative">
     <div class="container mx-auto px-4">
@@ -398,78 +399,7 @@
 
 
 
-<!--!--------------FORTALEZAS------------- -->
-    <!-- Features Section -->
-<section class="bg-slate-800 py-16 relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-0 w-40 h-40 bg-red-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-60 h-60 bg-red-600 rounded-full translate-x-1/3 translate-y-1/3"></div>
-    </div>
-    
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                <span class="text-white">NUESTRAS</span> 
-                <span class="text-red-600">FORTALEZAS</span>
-            </h2>
-            <div class="w-24 h-1 bg-red-600 mx-auto"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Feature 1 -->
-            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i class="fas fa-fist-raised text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white text-center mb-3">Técnicas Avanzadas</h3>
-                <p class="text-gray-300 text-center">
-                    Aprende técnicas de combate avanzadas con instructores certificados y experimentados.
-                </p>
-            </div>
-            
-            <!-- Feature 2 -->
-            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i class="fas fa-users text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white text-center mb-3">Comunidad Unida</h3>
-                <p class="text-gray-300 text-center">
-                    Forma parte de una comunidad que te apoya y motiva a superar tus límites cada día.
-                </p>
-            </div>
-            
-            <!-- Feature 3 -->
-            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i class="fas fa-dumbbell text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white text-center mb-3">Instalaciones Modernas</h3>
-                <p class="text-gray-300 text-center">
-                    Entrena en un espacio equipado con todo lo necesario para maximizar tu rendimiento.
-                </p>
-            </div>
-            
-            <!-- Feature 4 -->
-            <div class="bg-slate-900 p-6 rounded-lg transform transition-transform hover:scale-105 hover:shadow-xl">
-                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i class="fas fa-medal text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white text-center mb-3">Resultados Garantizados</h3>
-                <p class="text-gray-300 text-center">
-                    Programas de entrenamiento personalizados para alcanzar tus objetivos específicos.
-                </p>
-            </div>
-        </div>
-        
-        <!-- Call to Action -->
-        <div class="mt-12 text-center">
-            <a href="#clases" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                DESCUBRE NUESTRAS CLASES
-            </a>
-        </div>
-    </div>
-</section>
+
 
 <!--! SECCION DE VIDEOS -->
 <!-- Actividades Section with Video Loops -->
@@ -629,7 +559,7 @@
             </p>
         </div>
         
-        <!-- Profesores Grid - Centrado con 2 columnas -->
+<!-- Profesores Grid - Centrado con 2 columnas -->
         <div class="flex justify-center">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
                 <!-- Profesor 1 -->
@@ -641,7 +571,7 @@
                                 <!-- Placeholder for image -->
                                 <div class="w-full h-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
                                     <div class="text-slate-400 text-center">
-                                        <img src="assets/images/PrimerProfe.JPG" class="object-cover" alt="">
+                                        <img src="assets/images/PrimerProfe.webp" class="object-cover" alt="">
                                     </div>
                                 </div>
                                 <!-- Overlay effect -->
@@ -676,7 +606,7 @@
                                 <!-- Placeholder for image -->
                                 <div class="w-full h-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
                                     <div class="text-slate-400 text-center">
-                                        <img src="assets/images/SegundoProfe.JPG"  alt="">
+                                        <img src="assets/images/SegundoProfe.webp"  alt="">
                                     </div>
                                 </div>
                                 <!-- Overlay effect -->
@@ -716,6 +646,694 @@
     </div>
 </section>
 
+<!--!------------------------------GRILLA HORARIOS---------------->
+<!-- Horarios Section -->
+<section id="horarios" class="bg-[#050a1f] py-20 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 to-transparent"></div>
+        <div class="absolute top-32 right-32 w-80 h-80 bg-red-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-32 left-32 w-96 h-96 bg-blue-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-600 rounded-full opacity-3 blur-3xl"></div>
+    </div>
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-600 rounded-full"></div>
+        <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-2 h-2 bg-white rounded-full"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <div class="w-16 h-1 bg-red-600"></div>
+                <h2 class="text-5xl md:text-6xl font-bold">
+                    <span class="text-white">NUESTROS</span> 
+                    <span class="text-red-600">HORARIOS</span>
+                </h2>
+                <div class="w-16 h-1 bg-red-600"></div>
+            </div>
+            <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                Planificá tu semana de entrenamiento con nuestros horarios organizados. 
+                Todas las clases están diseñadas para adaptarse a tu rutina diaria.
+            </p>
+        </div>
+        
+        <!-- Schedule Grid -->
+        <div class="max-w-7xl mx-auto">
+            <!-- Desktop/Tablet View -->
+            <div class="hidden md:block">
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+                    <!-- Header -->
+                    <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
+                        <div class="grid grid-cols-6 gap-4">
+                            <div class="text-white font-bold text-center">HORARIO</div>
+                            <div class="text-white font-bold text-center">LUNES</div>
+                            <div class="text-white font-bold text-center">MARTES</div>
+                            <div class="text-white font-bold text-center">MIÉRCOLES</div>
+                            <div class="text-white font-bold text-center">JUEVES</div>
+                            <div class="text-white font-bold text-center">VIERNES</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Schedule Rows -->
+                    <div class="divide-y divide-slate-700/50">
+                        <!-- 18:30-19:30 -->
+                        <div class="grid grid-cols-6 gap-4 p-4 hover:bg-slate-700/20 transition-colors">
+                            <div class="text-gray-300 font-semibold text-center">18:30-19:30</div>
+                            <div class="text-center">
+                                <span class="text-gray-500 text-sm">-</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-blue-600/20 border border-blue-600/50 rounded-lg p-2">
+                                    <span class="text-blue-300 font-medium text-sm">Entrenamiento Físico</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <span class="text-gray-500 text-sm">-</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-blue-600/20 border border-blue-600/50 rounded-lg p-2">
+                                    <span class="text-blue-300 font-medium text-sm">Entrenamiento Físico</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-blue-600/20 border border-blue-600/50 rounded-lg p-2">
+                                    <span class="text-blue-300 font-medium text-sm">Entrenamiento Físico</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 19:30-21:00 -->
+                        <div class="grid grid-cols-6 gap-4 p-4 hover:bg-slate-700/20 transition-colors">
+                            <div class="text-gray-300 font-semibold text-center">19:30-21:00</div>
+                            <div class="text-center">
+                                <div class="bg-green-600/20 border border-green-600/50 rounded-lg p-2">
+                                    <span class="text-green-300 font-medium text-sm">BJJ</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-purple-600/20 border border-purple-600/50 rounded-lg p-2">
+                                    <span class="text-purple-300 font-medium text-sm">No-Gi</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-green-600/20 border border-green-600/50 rounded-lg p-2">
+                                    <span class="text-green-300 font-medium text-sm">BJJ</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-purple-600/20 border border-purple-600/50 rounded-lg p-2">
+                                    <span class="text-purple-300 font-medium text-sm">No-Gi</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-green-600/20 border border-green-600/50 rounded-lg p-2">
+                                    <span class="text-green-300 font-medium text-sm">BJJ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 21:00-22:00 -->
+                        <div class="grid grid-cols-6 gap-4 p-4 hover:bg-slate-700/20 transition-colors">
+                            <div class="text-gray-300 font-semibold text-center">21:00-22:00</div>
+                            <div class="text-center">
+                                <div class="bg-red-600/20 border border-red-600/50 rounded-lg p-2">
+                                    <span class="text-red-300 font-medium text-sm">BOXEO</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-red-600/20 border border-red-600/50 rounded-lg p-2">
+                                    <span class="text-red-300 font-medium text-sm">BOXEO</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <span class="text-gray-500 text-sm">-</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-red-600/20 border border-red-600/50 rounded-lg p-2">
+                                    <span class="text-red-300 font-medium text-sm">BOXEO</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <span class="text-gray-500 text-sm">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile View -->
+            <div class="md:hidden space-y-6">
+                <!-- Lunes -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
+                        <h3 class="text-white font-bold text-xl text-center">LUNES</h3>
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-green-600/10 border border-green-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">19:30 - 21:00</span>
+                            <span class="text-green-300 font-semibold">BJJ</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-red-600/10 border border-red-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">21:00 - 22:00</span>
+                            <span class="text-red-300 font-semibold">BOXEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Martes -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
+                        <h3 class="text-white font-bold text-xl text-center">MARTES</h3>
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-blue-600/10 border border-blue-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">18:30 - 19:30</span>
+                            <span class="text-blue-300 font-semibold">Entrenamiento Físico</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-600/10 border border-purple-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">19:30 - 21:00</span>
+                            <span class="text-purple-300 font-semibold">No-Gi</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-red-600/10 border border-red-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">21:00 - 22:00</span>
+                            <span class="text-red-300 font-semibold">BOXEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Miércoles -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
+                        <h3 class="text-white font-bold text-xl text-center">MIÉRCOLES</h3>
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-green-600/10 border border-green-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">19:30 - 21:00</span>
+                            <span class="text-green-300 font-semibold">BJJ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jueves -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
+                        <h3 class="text-white font-bold text-xl text-center">JUEVES</h3>
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-blue-600/10 border border-blue-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">18:30 - 19:30</span>
+                            <span class="text-blue-300 font-semibold">Entrenamiento Físico</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-purple-600/10 border border-purple-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">19:30 - 21:00</span>
+                            <span class="text-purple-300 font-semibold">No-Gi</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-red-600/10 border border-red-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">21:00 - 22:00</span>
+                            <span class="text-red-300 font-semibold">BOXEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Viernes -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+                    <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
+                        <h3 class="text-white font-bold text-xl text-center">VIERNES</h3>
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-blue-600/10 border border-blue-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">18:30 - 19:30</span>
+                            <span class="text-blue-300 font-semibold">Entrenamiento Físico</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-green-600/10 border border-green-600/30 rounded-lg">
+                            <span class="text-gray-300 font-medium">19:30 - 21:00</span>
+                            <span class="text-green-300 font-semibold">BJJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="mt-12 max-w-4xl mx-auto">
+            <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6">
+                <h3 class="text-white font-bold text-xl mb-4 text-center">Leyenda de Actividades</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                        <span class="text-gray-300">BJJ (Brazilian Jiu-Jitsu)</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+                        <span class="text-gray-300">Boxeo</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <span class="text-gray-300">No-Gi Grappling</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-blue-600 rounded-full"></div>
+                        <span class="text-gray-300">Entrenamiento Físico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <p class="text-gray-300 text-lg mb-6">
+                ¿Tenés dudas sobre los horarios o querés reservar tu lugar en una clase?
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    RESERVAR CLASE
+                </button>
+                <button class="bg-transparent border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                    CONSULTAR HORARIOS
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--! --------------------------------------------UBICACION---------------------------->
+<section id="ubicacion" class="bg-[#050a1f] py-20 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 to-transparent"></div>
+        <div class="absolute top-32 right-32 w-80 h-80 bg-red-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-32 left-32 w-96 h-96 bg-blue-600 rounded-full opacity-5 blur-3xl"></div>
+    </div>
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-600 rounded-full"></div>
+        <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-2 h-2 bg-white rounded-full"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <div class="w-16 h-1 bg-red-600"></div>
+                <h2 class="text-5xl md:text-6xl font-bold">
+                    <span class="text-white">NUESTRA</span> 
+                    <span class="text-red-600">UBICACIÓN</span>
+                </h2>
+                <div class="w-16 h-1 bg-red-600"></div>
+            </div>
+            <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                Encontranos en el corazón de Banfield. Un espacio diseñado para tu entrenamiento 
+                con fácil acceso y todas las comodidades que necesitás.
+            </p>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Map Container -->
+            <div class="order-2 lg:order-1">
+                <div class="relative group">
+                    <!-- Map Frame -->
+                    <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-4 hover:border-red-600/50 transition-all duration-300">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.610904766996!2d-58.39298472502177!3d-34.74020087290564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2a09616bcad%3A0xbdb63ac27a566484!2sCountry%20Club%20infantil%20de%20Banfield!5e0!3m2!1ses!2sar!4v1747018492439!5m2!1ses!2sar" 
+                                class="w-full h-80 md:h-96 rounded-xl filter grayscale hover:grayscale-0 transition-all duration-500"
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade" 
+                                allowfullscreen="">
+                            </iframe>
+                            
+                            <!-- Overlay for better integration -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none rounded-xl"></div>
+                        </div>
+                        
+                        <!-- Map Controls -->
+                        <div class="flex justify-between items-center mt-4 px-2">
+                            <div class="flex items-center space-x-2 text-gray-400">
+                                <i class="fas fa-map-marker-alt text-red-600"></i>
+                                <span class="text-sm">Banfield, Buenos Aires</span>
+                            </div>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                Ver en Google Maps
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-3 -right-3 w-6 h-6 bg-red-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute -bottom-3 -left-3 w-4 h-4 bg-red-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+            </div>
+            
+            <!-- Location Info -->
+            <div class="order-1 lg:order-2 space-y-8">
+                <!-- Address Card -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 hover:border-red-600/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Dirección</h3>
+                            <p class="text-gray-300 text-lg">Country Club Infantil de Banfield</p>
+                            <p class="text-gray-400">Banfield, Buenos Aires, Argentina</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transport Info -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 hover:border-red-600/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bus text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Transporte Público</h3>
+                            <p class="text-gray-300">Fácil acceso en transporte público</p>
+                            <p class="text-gray-400">Múltiples líneas de colectivos y tren</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parking Info -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 hover:border-red-600/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-car text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Estacionamiento</h3>
+                            <p class="text-gray-300">Estacionamiento disponible</p>
+                            <p class="text-gray-400">Espacio seguro para tu vehículo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 hover:border-red-600/50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Contacto</h3>
+                            <p class="text-gray-300">¿Necesitás indicaciones?</p>
+                            <p class="text-gray-400">Llamanos y te ayudamos a llegar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="text-center mt-16">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="directions-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <i class="fas fa-directions mr-2"></i>
+                    CÓMO LLEGAR
+                </button>
+                <button id="contact-location-btn" class="bg-transparent border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                    <i class="fas fa-phone mr-2"></i>
+                    CONTACTAR
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--!-----------------------------FORMULARIO CONTACTO------------------------->
+
+<!-- Contacto Section -->
+<section id="contacto" class="bg-[#050a1f] py-20 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 to-transparent"></div>
+        <div class="absolute top-32 right-32 w-80 h-80 bg-red-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-32 left-32 w-96 h-96 bg-blue-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-600 rounded-full opacity-3 blur-3xl"></div>
+    </div>
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-600 rounded-full"></div>
+        <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-2 h-2 bg-white rounded-full"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Title -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <div class="w-16 h-1 bg-red-600"></div>
+                <h2 class="text-5xl md:text-6xl font-bold">
+                    <span class="text-white">CONTACTO</span>
+                </h2>
+                <div class="w-16 h-1 bg-red-600"></div>
+            </div>
+            <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                ¿Tenés dudas? ¿Querés conocer más sobre nuestras clases? 
+                Escribinos y te responderemos a la brevedad.
+            </p>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="order-2 lg:order-1">
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-envelope text-red-600 mr-3"></i>
+                        Envianos un Mensaje
+                    </h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <!-- Name Field -->
+                        <div class="space-y-2">
+                            <label for="name" class="block text-gray-300 font-medium">
+                                Nombre Completo *
+                            </label>
+                            <div class="relative">
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 focus:outline-none transition-all duration-300"
+                                    placeholder="Tu nombre completo"
+                                >
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div class="space-y-2">
+                            <label for="email" class="block text-gray-300 font-medium">
+                                Email *
+                            </label>
+                            <div class="relative">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 focus:outline-none transition-all duration-300"
+                                    placeholder="tu@email.com"
+                                >
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                                    <i class="fas fa-envelope text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone Field -->
+                        <div class="space-y-2">
+                            <label for="phone" class="block text-gray-300 font-medium">
+                                Teléfono
+                            </label>
+                            <div class="relative">
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone"
+                                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 focus:outline-none transition-all duration-300"
+                                    placeholder="+54 11 1234-5678"
+                                >
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                                    <i class="fas fa-phone text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Interest Field -->
+                        <div class="space-y-2">
+                            <label for="interest" class="block text-gray-300 font-medium">
+                                ¿Qué te interesa?
+                            </label>
+                            <div class="relative">
+                                <select 
+                                    id="interest" 
+                                    name="interest"
+                                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-red-600 focus:ring-2 focus:ring-red-600/20 focus:outline-none transition-all duration-300 appearance-none"
+                                >
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="bjj">Brazilian Jiu-Jitsu (BJJ)</option>
+                                    <option value="no-gi">No-Gi Grappling</option>
+                                    <option value="boxeo">Boxeo</option>
+                                    <option value="fisico">Entrenamiento Físico</option>
+                                    <option value="todas">Todas las disciplinas</option>
+                                    <option value="info">Información general</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                    <i class="fas fa-chevron-down text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Message Field -->
+                        <div class="space-y-2">
+                            <label for="message" class="block text-gray-300 font-medium">
+                                Mensaje *
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="5" 
+                                required
+                                class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 focus:outline-none transition-all duration-300 resize-none"
+                                placeholder="Contanos qué te gustaría saber sobre Gorila Roots..."
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="pt-4">
+                            <button 
+                                type="submit" 
+                                id="submit-btn"
+                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
+                            >
+                                <span id="submit-text">ENVIAR MENSAJE</span>
+                                <i id="submit-icon" class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Success/Error Messages -->
+                        <div id="form-message" class="hidden p-4 rounded-lg text-center font-medium"></div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="order-1 lg:order-2 space-y-6">
+                <!-- Contact Methods -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-address-book text-red-600 mr-3"></i>
+                        Información de Contacto
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <!-- WhatsApp -->
+                        <div class="flex items-center space-x-4 p-4 bg-green-600/10 border border-green-600/30 rounded-lg hover:bg-green-600/20 transition-colors cursor-pointer" onclick="openWhatsApp()">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">WhatsApp</h4>
+                                <p class="text-gray-300">+54 11 1234-5678</p>
+                                <p class="text-green-400 text-sm">Respuesta inmediata</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="flex items-center space-x-4 p-4 bg-blue-600/10 border border-blue-600/30 rounded-lg hover:bg-blue-600/20 transition-colors cursor-pointer" onclick="openEmail()">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Email</h4>
+                                <p class="text-gray-300">info@gorilaroots.com</p>
+                                <p class="text-blue-400 text-sm">Respuesta en 24hs</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram -->
+                        <div class="flex items-center space-x-4 p-4 bg-purple-600/10 border border-purple-600/30 rounded-lg hover:bg-purple-600/20 transition-colors cursor-pointer" onclick="openInstagram()">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Instagram</h4>
+                                <p class="text-gray-300">@gorilaroots</p>
+                                <p class="text-purple-400 text-sm">Seguinos para novedades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Schedule Info -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-clock text-red-600 mr-3"></i>
+                        Horarios de Atención
+                    </h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Lunes a Viernes</span>
+                            <span class="text-white font-semibold">18:00 - 22:00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Sábados</span>
+                            <span class="text-white font-semibold">09:00 - 13:00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Domingos</span>
+                            <span class="text-red-400 font-semibold">Cerrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Quick Links -->
+                <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                        <i class="fas fa-question-circle text-red-600 mr-3"></i>
+                        Preguntas Frecuentes
+                    </h3>
+                    
+                    <div class="space-y-3">
+                        <div class="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-chevron-right text-red-600 mr-2"></i>
+                            ¿Necesito experiencia previa?
+                        </div>
+                        <div class="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-chevron-right text-red-600 mr-2"></i>
+                            ¿Qué debo traer a mi primera clase?
+                        </div>
+                        <div class="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-chevron-right text-red-600 mr-2"></i>
+                            ¿Ofrecen clases de prueba?
+                        </div>
+                        <div class="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                            <i class="fas fa-chevron-right text-red-600 mr-2"></i>
+                            ¿Cuáles son los precios?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- JavaScript -->
     <script src="src/main.js"></script>

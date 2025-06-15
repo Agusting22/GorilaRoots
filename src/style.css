@@ -1,134 +1,397 @@
+/* ===================================
+   GORILA ROOTS - CSS LIMPIO SIN EFECTOS PESADOS
+   ================================= */
+
+/* ===== RESET Y BASE ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== FONDO SIMPLE ===== */
+body {
+  background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+  position: relative;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+section:nth-child(even) {
+  background: rgba(30, 41, 59, 0.3);
+}
+
+/* ===== HEADER/NAVBAR ===== */
+#main-header {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#main-header.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+/* Navegación desktop */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+}
+
+.nav-link.section-active {
+  color: #dc2626;
+  text-shadow: 0 0 8px rgba(220, 38, 38, 0.5);
+}
+
+/* Navegación móvil */
+.mobile-menu {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.open,
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-link {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideInMobile 0.3s ease forwards;
+}
+
+.mobile-nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #dc2626;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.mobile-nav-link:hover::before {
+  width: 80%;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(220, 38, 38, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Delays para animación móvil */
+.mobile-nav-link:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.mobile-nav-link:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.mobile-nav-link:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.mobile-nav-link:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.mobile-nav-link:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+/* Botón menú móvil */
+#mobile-menu-btn .fas {
+  transition: transform 0.3s ease;
+}
+
+#mobile-menu-btn:hover .fas {
+  transform: rotate(90deg);
+}
+
+/* ===== HERO SECTION ===== */
 .hero-bg {
-    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23334155" width="1200" height="800"/><g fill="%23475569"><circle cx="200" cy="200" r="100"/><circle cx="600" cy="300" r="80"/><circle cx="1000" cy="150" r="120"/><circle cx="400" cy="500" r="90"/><circle cx="800" cy="600" r="110"/></g></svg>');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  background: linear-gradient(135deg, rgba(5, 10, 31, 0.9) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(30, 41, 59, 0.7) 100%);
+  background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23334155" width="1200" height="800"/><g fill="%23475569"><circle cx="200" cy="200" r="100"/><circle cx="600" cy="300" r="80"/><circle cx="1000" cy="150" r="120"/><circle cx="400" cy="500" r="90"/><circle cx="800" cy="600" r="110"/></g></svg>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .gorila-text {
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-    letter-spacing: 0.2em;
-}
-
-.mobile-menu {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.mobile-menu.active {
-    transform: translateX(0);
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.fade-in-delay-1 { animation-delay: 0.2s; }
-.fade-in-delay-2 { animation-delay: 0.4s; }
-.fade-in-delay-3 { animation-delay: 0.6s; }
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.2em;
 }
 
 .sport-item {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .sport-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
-/* Estilos adicionales para la sección Visión y Misión */
-
-#vision-mision {
-    background: linear-gradient(135deg, #050a1f 0%, #0a1433 50%, #1a2951 100%);
+/* ===== SECCIONES ESPECÍFICAS ===== */
+#vision-mision,
+#horarios,
+#contacto,
+#ubicacion,
+#profesores,
+#nosotros {
+  background: linear-gradient(135deg, rgba(5, 10, 31, 0.6) 0%, rgba(10, 20, 51, 0.5) 50%, rgba(26, 41, 81, 0.4) 100%);
 }
 
-/* Animaciones para las imágenes */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+/* ===== EFECTOS HOVER PARA CARDS ===== */
+.bg-slate-800\/30,
+.bg-slate-800\/50 {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.floating-image {
-    animation: float 6s ease-in-out infinite;
+.bg-slate-800\/30:hover,
+.bg-slate-800\/50:hover {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(220, 38, 38, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Efectos de hover para las imágenes */
-.image-container:hover img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+/* ===== EFECTOS HOVER PARA ACTIVIDADES ===== */
+.bg-green-600\/20:hover {
+  background-color: rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.7);
+  transform: scale(1.02);
 }
 
-/* Efectos de parallax suave */
-@media (min-width: 1024px) {
-    .parallax-element {
-        transform: translateY(var(--scroll-y, 0) * 0.5px);
-    }
+.bg-red-600\/20:hover {
+  background-color: rgba(220, 38, 38, 0.3);
+  border-color: rgba(220, 38, 38, 0.7);
+  transform: scale(1.02);
 }
 
-/* Animaciones de entrada */
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease-out forwards;
+.bg-purple-600\/20:hover {
+  background-color: rgba(147, 51, 234, 0.3);
+  border-color: rgba(147, 51, 234, 0.7);
+  transform: scale(1.02);
 }
 
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLeft 0.8s ease-out forwards;
+.bg-blue-600\/20:hover {
+  background-color: rgba(37, 99, 235, 0.3);
+  border-color: rgba(37, 99, 235, 0.7);
+  transform: scale(1.02);
 }
 
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    animation: fadeInRight 0.8s ease-out forwards;
+/* ===== FORMULARIO DE CONTACTO ===== */
+input:focus,
+textarea:focus,
+select:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.2);
+  border-color: rgba(220, 38, 38, 0.5);
+}
+
+.field-valid {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2) !important;
+}
+
+.field-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+}
+
+.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ===== FIXES PARA PROBLEMAS DE HOVER ===== */
+/* Mapa de ubicación */
+#ubicacion iframe {
+  border: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#ubicacion iframe:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Profesores */
+#profesores .group {
+  transition: all 0.3s ease;
+}
+
+#profesores .group:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: rgba(220, 38, 38, 0.5);
+}
+
+/* ===== EFECTOS ESPECIALES SIMPLES ===== */
+.text-red-600,
+.bg-red-600 {
+  filter: drop-shadow(0 0 6px rgba(220, 38, 38, 0.3));
+}
+
+button:hover {
+  filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.4));
+}
+
+/* ===== ANIMACIONES SIMPLES ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.2s;
+}
+.fade-in-delay-2 {
+  animation-delay: 0.4s;
+}
+.fade-in-delay-3 {
+  animation-delay: 0.6s;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== ANIMACIONES @KEYFRAMES ===== */
+@keyframes slideInMobile {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes fadeInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Responsive adjustments */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-    #vision-mision .container > div > div {
-        flex-direction: column;
-    }
-    
-    #vision-mision h2 {
-        font-size: 3rem;
-    }
-    
-    #vision-mision p {
-        font-size: 1.125rem;
-    }
+  body {
+    padding-top: 70px;
+  }
+
+  #main-header .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-menu {
+    padding-top: 80px;
+  }
+
+  #contacto h2,
+  #horarios h2,
+  #vision-mision h2 {
+    font-size: 3rem;
+  }
+
+  .bg-slate-800\/30 {
+    padding: 1.5rem;
+  }
+
+  /* Simplificar efectos en móvil */
+  .bg-slate-800\/30:hover,
+  .bg-slate-800\/50:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #contacto h2,
+  #horarios h2,
+  #vision-mision h2 {
+    font-size: 2.5rem;
+  }
+
+  .bg-slate-800\/30 {
+    padding: 1rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+
+  .grid.grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ===== UTILIDADES ===== */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Elementos con aceleración por hardware básica */
+.grid > div,
+.rounded-2xl,
+.rounded-xl,
+.rounded-lg {
+  transform: translateZ(0);
 }
