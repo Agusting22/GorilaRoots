@@ -395,3 +395,522 @@ button:hover {
 .rounded-lg {
   transform: translateZ(0);
 }
+
+/* ===================================
+   TÍTULO HERO RESPONSIVE - IMAGEN WEBP
+   ================================= */
+
+/* Contenedor del título principal */
+.hero-title-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* Imagen del título responsive */
+.hero-title-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Hover effect para la imagen */
+.hero-title-image:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 6px 12px rgba(220, 38, 38, 0.4));
+}
+
+/* ===== BREAKPOINTS RESPONSIVE ===== */
+
+/* Móviles muy pequeños (320px - 374px) */
+@media (max-width: 374px) {
+  .hero-title-container {
+    max-width: 280px;
+    padding: 0 0.5rem;
+  }
+
+  .hero-title-image {
+    max-height: 60px;
+  }
+}
+
+/* Móviles pequeños (375px - 424px) */
+@media (min-width: 375px) and (max-width: 424px) {
+  .hero-title-container {
+    max-width: 320px;
+    padding: 0 0.75rem;
+  }
+
+  .hero-title-image {
+    max-height: 70px;
+  }
+}
+
+/* Móviles medianos (425px - 567px) */
+@media (min-width: 425px) and (max-width: 567px) {
+  .hero-title-container {
+    max-width: 380px;
+    padding: 0 1rem;
+  }
+
+  .hero-title-image {
+    max-height: 80px;
+  }
+}
+
+/* Móviles grandes / Tablets pequeñas (568px - 667px) */
+@media (min-width: 568px) and (max-width: 667px) {
+  .hero-title-container {
+    max-width: 450px;
+  }
+
+  .hero-title-image {
+    max-height: 90px;
+  }
+}
+
+/* Tablets (668px - 767px) */
+@media (min-width: 668px) and (max-width: 767px) {
+  .hero-title-container {
+    max-width: 520px;
+  }
+
+  .hero-title-image {
+    max-height: 100px;
+  }
+}
+
+/* Tablets grandes (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-title-container {
+    max-width: 600px;
+  }
+
+  .hero-title-image {
+    max-height: 110px;
+  }
+}
+
+/* Laptops (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-title-container {
+    max-width: 700px;
+  }
+
+  .hero-title-image {
+    max-height: 120px;
+  }
+}
+
+/* Desktops (1280px - 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .hero-title-container {
+    max-width: 800px;
+  }
+
+  .hero-title-image {
+    max-height: 130px;
+  }
+}
+
+/* Pantallas grandes (1440px+) */
+@media (min-width: 1440px) {
+  .hero-title-container {
+    max-width: 900px;
+  }
+
+  .hero-title-image {
+    max-height: 140px;
+  }
+}
+
+/* ===== ORIENTACIÓN LANDSCAPE EN MÓVILES ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-title-container {
+    max-width: 400px;
+  }
+
+  .hero-title-image {
+    max-height: 50px;
+  }
+}
+
+/* ===== AJUSTES PARA PANTALLAS DE ALTA DENSIDAD ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-title-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===== FALLBACK PARA NAVEGADORES ANTIGUOS ===== */
+.hero-title-image {
+  -ms-interpolation-mode: bicubic; /* IE */
+}
+
+/* ===== LOADING STATE ===== */
+.hero-title-image {
+  opacity: 0;
+  animation: fadeInTitle 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== AJUSTES PARA EL HERO SECTION ===== */
+.hero-bg .space-y-6 {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajustar el subtítulo para que se vea bien con la imagen */
+.hero-subtitle {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE PARA EL GRID DE DEPORTES ===== */
+@media (max-width: 567px) {
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .sport-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .sport-item span {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .sports-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* ===== AJUSTES PARA EL BOTÓN DE CONTACTO ===== */
+@media (max-width: 567px) {
+  #contact-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  #contact-btn {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ===================================
+   FIX PARA GRID DE DEPORTES RESPONSIVE
+   ================================= */
+
+/* Grid principal de deportes */
+.sports-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 32rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sport item base */
+.sport-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 0; /* Permite que el texto se ajuste */
+}
+
+.sport-item:hover {
+  background: rgba(220, 38, 38, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Círculo indicador */
+.sport-item .sport-indicator {
+  width: 2rem;
+  height: 2rem;
+  background: #dc2626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sport-item .sport-indicator .inner-circle {
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Texto del deporte */
+.sport-item .sport-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Móviles muy pequeños (hasta 374px) */
+@media (max-width: 374px) {
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .sport-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .sport-item .sport-indicator {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .sport-item .sport-indicator .inner-circle {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 0.875rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
+
+/* Móviles pequeños (375px - 424px) */
+@media (min-width: 375px) and (max-width: 424px) {
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .sport-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 0.875rem;
+    white-space: normal;
+  }
+}
+
+/* Móviles medianos (425px - 567px) */
+@media (min-width: 425px) and (max-width: 567px) {
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 400px;
+  }
+
+  .sport-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 1rem;
+    white-space: normal;
+  }
+}
+
+/* Móviles grandes / Tablets pequeñas (568px - 667px) */
+@media (min-width: 568px) and (max-width: 667px) {
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    max-width: 450px;
+  }
+
+  .sport-item {
+    flex-direction: row;
+    text-align: left;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+}
+
+/* Tablets (668px - 767px) */
+@media (min-width: 668px) and (max-width: 767px) {
+  .sports-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
+  }
+
+  .sport-item {
+    flex-direction: row;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 1.125rem;
+  }
+}
+
+/* Tablets grandes y Desktop (768px+) */
+@media (min-width: 768px) {
+  .sports-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 32rem;
+  }
+
+  .sport-item {
+    flex-direction: row;
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 1.125rem;
+    white-space: nowrap;
+  }
+}
+
+/* ===== ORIENTACIÓN LANDSCAPE EN MÓVILES ===== */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 767px) {
+  .sports-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    max-width: 600px;
+  }
+
+  .sport-item {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .sport-item .sport-indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .sport-item .sport-indicator .inner-circle {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .sport-item .sport-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== EFECTOS ADICIONALES ===== */
+
+/* Animación de entrada para cada item */
+.sport-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSport 0.6s ease-out forwards;
+}
+
+.sport-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.sport-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.sport-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.sport-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInSport {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de pulso en el círculo al hacer hover */
+.sport-item:hover .sport-indicator {
+  animation: pulseIndicator 0.6s ease-in-out;
+}
+
+@keyframes pulseIndicator {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+.sport-item:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* ===== ESTADOS ACTIVOS ===== */
+.sport-item.active {
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.5);
+}
+
+.sport-item.active .sport-indicator {
+  background: #ef4444;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}

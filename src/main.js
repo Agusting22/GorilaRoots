@@ -4,11 +4,11 @@
  * ===================================
  */
 
-/* // ===== CONFIGURACIÓN GLOBAL =====
+// ===== CONFIGURACIÓN GLOBAL =====
 const CONFIG = {
-  phoneNumber: "5411123456789",
-  email: "info@gorilaroots.com",
-  instagram: "https://instagram.com/gorilaroots",
+  phoneNumber: "1134804529",
+  email: "ag225966@gmail.com",
+  instagram: "https://www.instagram.com/gorila.roots/",
 }
 
 // ===== UTILIDADES =====
@@ -493,4 +493,4 @@ class GorilaRootsApp {
 }
 
 // ===== START APPLICATION =====
-new GorilaRootsApp() */
+new GorilaRootsApp()
