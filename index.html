@@ -25,7 +25,7 @@
 
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8">
+            <nav class="hidden md:hidden lg:flex items-center space-x-8">
                 <a href="#nosotros" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Sobre Nosotros
                 </a>
@@ -48,7 +48,7 @@
 
             <!-- Social Icons & Mobile Menu Button -->
             <div class="flex items-center space-x-3">
-                <a href="mailto:gorilarootsbjj@gmail.com" class="lg:hidden md:hidden w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <a href="mailto:gorilarootsbjj@gmail.com" class=" w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fas fa-envelope text-white"></i>
                 </a>
                 <a href="https://wa.me/1234567890" target="_blank" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
@@ -59,7 +59,7 @@
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <button id="mobile-menu-btn" class=" lg:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fas fa-bars text-white"></i>
                 </button>
             </div>
@@ -121,28 +121,28 @@
 
                 <div class="sports-grid grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
                     <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
                             <div class="w-4 h-4 bg-white rounded-full"></div>
                         </div>
                         <span class="text-lg font-medium">Jiu Jitsu</span>
                     </div>
 
                     <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
                             <div class="w-4 h-4 bg-white rounded-full"></div>
                         </div>
                         <span class="text-lg font-medium">No-Gi</span>
                     </div>
 
                     <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
                             <div class="w-4 h-4 bg-white rounded-full"></div>
                         </div>
                         <span class="text-lg font-medium">Boxeo</span>
                     </div>
 
                     <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
                             <div class="w-4 h-4 bg-white rounded-full"></div>
                         </div>
                         <span class="text-lg font-medium">Físico</span>
@@ -152,7 +152,7 @@
 
             <!-- boton de contacto -->
             <div class="pt-8 fade-in fade-in-delay-3">
-                <button id="contact-btn" class="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <button id="contact-btn" class="bg-red-700 hover:bg-red-700 text-white px-12 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg">
                     CONTÁCTANOS
                 </button>
             </div>
@@ -182,234 +182,223 @@
         </div>
     </section>
 <!--!--------------------------------------- SOBRE NOSOTROS SECCION-->
-<!-- Sobre Nosotros Section -->
-<section id="nosotros" class="bg-[#050a1f] py-16 relative">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center">
-            <!-- Left Content -->
-            <div class="w-full lg:w-3/5 pr-0 lg:pr-8">
-                <!-- Title -->
-                <h2 class="text-5xl md:text-6xl font-bold mb-12">
-                    <span class="text-white">SOBRE</span> 
-                    <span class="text-red-600">NOSOTROS</span>
-                </h2>
+<!-- SECCIÓN SOBRE NOSOTROS -->
+<section id="nosotros" class="about-section">
+
+    <div class="about-container">
+        <div class="about-layout">
+            <!-- Contenido Principal -->
+            <div class="content-grid">
+                <!-- Título -->
+                <div class="title-section">
+                    <h2 class="main-title">
+                        <span class="title-white">SOBRE</span><br>
+                        <span class="title-red">NOSOTROS</span>
+                    </h2>
+                </div>
                 
-                <!-- Bullet Points -->
-                <div class="space-y-8 mb-12">
-                    <!-- Point 1 -->
-                    <div class="flex items-start">
-                        <div class="w-6 h-6 bg-red-600 rounded-full shadow-[0_0_15px_6px_rgba(220,38,38,0.6)] mt-1.5"></div>
-                        <p class="text-white text-xl font-medium ml-4">Fundado En 2024.</p>
-                    </div>
-                    
-                    <!-- Point 2 -->
-                    <div class="flex items-start">
-                        <div class="w-6 h-6 rounded-full mt-1.5 bg-red-600 shadow-[0_0_15px_6px_rgba(220,38,38,0.6)]"></div>
-                        <p class="text-white text-xl font-medium ml-4">
-                            Somos Un Centro Deportivo Especializado<br>
-                            En Disciplinas De Combate Y Preparación<br>
-                            Física Integral.
-                        </p>
-                    </div>
-                    
-                    <!-- Point 3 -->
-                    <div class="flex items-start">
-                        <div class="w-6 h-6 bg-red-600 rounded-full shadow-[0_0_15px_6px_rgba(220,38,38,0.6)] mt-1.5"></div>
-                        <div class="text-white text-xl font-medium ml-4">
-                            <p class="mb-4">
-                                Este Proyecto Nace Con La Misión De<br>
-                                Acercar A Las Personas Al Movimiento Y Al<br>
-                                Deporte, Promoviendo Valores Esenciales<br>
-                                Como:
+                <!-- Información Principal -->
+                <div class="info-section">
+                    <div class="timeline-container">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item" tabindex="0">
+                            <p class="timeline-text">
+                                <strong>Fundado en 2024</strong> - Un nuevo comienzo en el mundo del deporte de combate.
+                            </p>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item" tabindex="0">
+                            <p class="timeline-text">
+                                Somos un <strong>centro deportivo especializado</strong> en disciplinas de combate y preparación física integral, diseñado para atletas de todos los niveles.
+                            </p>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item" tabindex="0">
+                            <p class="timeline-text">
+                                Este proyecto nace con la <strong>misión de acercar a las personas</strong> al movimiento y al deporte, promoviendo valores esenciales para el crecimiento personal y comunitario.
                             </p>
                             
-                            <!-- Values -->
-                            <div class="grid grid-cols-2 gap-x-8 gap-y-6 mt-4">
-                                <div>
-                                    <p class="text-white text-xl font-medium ">Superación</p>
-                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
-                                </div>
-                                
-                                <div>
-                                    <p class="text-white text-xl font-medium">Confianza</p>
-                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
-                                </div>
-                                
-                                <div>
-                                    <p class="text-white text-xl font-medium">Respeto</p>
-                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
-                                </div>
-                                
-                                <div>
-                                    <p class="text-white text-xl font-medium">Compañerismo</p>
-                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
-                                </div>
-                                
-                                <div class="col-span-2">
-                                    <p class="text-white text-xl font-medium">Disciplina</p>
-                                    <div class="w-full h-0.5 bg-red-600 mt-1"></div>
+                            <!-- Valores -->
+                            <div class="values-container">
+                                <div class="values-grid">
+                                    <div class="value-card" tabindex="0">
+                                        <p class="value-text">Superación</p>
+                                    </div>
+                                    <div class="value-card" tabindex="0">
+                                        <p class="value-text">Confianza</p>
+                                    </div>
+                                    <div class="value-card" tabindex="0">
+                                        <p class="value-text">Respeto</p>
+                                    </div>
+                                    <div class="value-card" tabindex="0">
+                                        <p class="value-text">Compañerismo</p>
+                                    </div>
+                                    <div class="value-card" tabindex="0">
+                                        <p class="value-text">Disciplina</p>
+                                    </div>
+                                    <div class="value-card" tabindex="0">
+                                        <p class="value-text">Perseverancia</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Red Box -->
-                <div class="border-2 border-red-600 p-6 mt-8 shadow-[0_0_15px_6px_rgba(220,38,38,0.6)]">
-                    <p class="text-white text-lg">
-                        En Un Espacio Amigable Y Libre De Juicios, Creemos Profundamente Que
-                        Todos Tenemos La Capacidad De Alcanzar Nuestras Metas, Apoyándonos
-                        En La Voluntad Y En La Fuerza De Nuestra Comunidad.
+                <!-- Caja de Misión -->
+                <div class="mission-box">
+                    <p class="mission-text">
+                        En un <strong>espacio amigable y libre de juicios</strong>, creemos profundamente que todos tenemos la capacidad de alcanzar nuestras metas, apoyándonos en la voluntad y en la fuerza de nuestra comunidad. 
+                        <br><br>
+                        Nuestro compromiso es <strong>formar no solo atletas, sino personas íntegras</strong> que lleven estos valores más allá del tatami.
                     </p>
                 </div>
             </div>
             
-            <!-- Right Content - Logo -->
-<div class="w-full lg:w-2/5 mt-12 lg:mt-0 flex justify-center lg:justify-end">
-<div class="w-full max-w-[500px] aspect-square bg-[#0a1433] rounded-full flex items-center justify-center p-2 shadow-[0_0_15px_6px_rgba(220,38,38,0.6)]">
-    <div class="w-full h-full bg-black rounded-full flex items-center justify-center relative">
-      <div class="absolute inset-0 rounded-full border-4 border-white"></div>
-      <img src="assets/images/logoCompleto.webp"
-           alt="Gorila Roots Logo"
-           class="w-full h-full object-cover rounded-full z-10" />
-    </div>
-  </div>
-</div>
-
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-container">
+                    <div class="logo-outer-ring">
+                        <div class="logo-middle-ring">
+                            <div class="logo-inner-container">
+                                <img src="assets/images/logoCompleto.webp"
+                                     alt="Gorila Roots - Centro Deportivo de Combate"
+                                     class="logo-image"
+                                     loading="lazy" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!--!-------------------------------------VISION Y MISION SECCION--------------->
 
-<section id="vision-mision" class="bg-[#050a1f] py-20 relative overflow-hidden">
-    <!-- Background Effects -->
-    <div class="absolute inset-0">
-        <div class="absolute top-20 left-10 w-96 h-96 bg-blue-600 rounded-full opacity-10 blur-3xl"></div>
-        <div class="absolute bottom-20 right-10 w-80 h-80 bg-red-600 rounded-full opacity-10 blur-3xl"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-600 rounded-full opacity-5 blur-3xl"></div>
-    </div>
-    
-    <div class="container mx-auto px-4 relative z-10">
-        <!-- Visión Section -->
-        <div class="mb-20">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Content -->
-                <div class="w-full lg:w-3/5 space-y-6">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <div class="w-2 h-16 bg-red-600"></div>
-                        <h2 class="text-5xl md:text-6xl font-bold text-white">Visión</h2>
-                    </div>
-                    
-                    <div class="space-y-6 text-white">
-                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
-                            Buscamos Ser un referente en el desarrollo físico y 
-                            emocional de las personas.
-                        </p>
-                        
-                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
-                            Queremos lograrlo A través del entrenamiento.
-                        </p>
-                        
-                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
-                            acompañamos un camino hacia la autenticidad, la conexión 
-                            y la superación personal.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Right Image -->
-                <div class="w-full lg:w-2/5 flex justify-center">
-                    <div class="relative">
-                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img 
-                                src="assets/images/Vision.webp" 
-                                alt="Entrenamiento de boxeo en Gorila Roots" 
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute -top-4 -right-4 w-24 h-8 bg-red-600 rounded-full opacity-100 blur-[6vh] shadow-xl"></div>
-
-                        <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-red-600 rounded-full opacity-10 blur-3xl shadow-xl"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Separator -->
-        <div class="flex justify-center mb-20">
-            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
-        </div>
-        
-        <!-- Misión Section -->
-        <div>
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Image -->
-                <div class="w-full lg:w-2/5 flex justify-center order-2 lg:order-1">
-                    <div class="relative">
-                        <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img 
-                                src="assets/images/childBoxing.webp" 
-                                alt="Entrenamiento en equipo en Gorila Roots" 
-                                class="w-full h-full object-cover"
-                            />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-red-600 blur-xl rounded-full"></div>
-                        <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-red-600 blur-xl rounded-full"></div>
-                    </div>
-                </div>
-                
-                <!-- Right Content -->
-                <div class="w-full lg:w-3/5 space-y-6 order-1 lg:order-2">
-                    <div class="flex items-center space-x-4 mb-8">
-                        <div class="w-2 h-16 bg-red-600"></div>
-                        <h2 class="text-5xl md:text-6xl font-bold text-white">Misión</h2>
-                    </div>
-                    
-                    <div class="space-y-8 text-white">
-                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
-                            El objetivo es formar una comunidad que mediante:
-                        </p>
-                        
-                        <!-- Bullet Points -->
-                        <div class="space-y-4 ml-6">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
-                                <p class="text-xl md:text-2xl font-medium">Las artes de combate</p>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
-                                <p class="text-xl md:text-2xl font-medium">El movimiento físico y</p>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-3 h-3 bg-red-600 rounded-full flex-shrink-0"></div>
-                                <p class="text-xl md:text-2xl font-medium">El trabajo en equipo,</p>
-                            </div>
+<!-- SECCIÓN VISIÓN Y MISIÓN COMPACTA -->
+<section id="vision-mision" class="vision-mission-section">
+    <div class="vm-container">
+        <div class="vm-layout">
+            
+            <!-- VISIÓN -->
+            <div class="vm-card vision">
+                <div class="vm-content-grid">
+                    <!-- Contenido -->
+                    <div class="vm-content">
+                        <div class="vm-header">
+                            <div class="vm-accent-line"></div>
+                            <h2 class="vm-title vision">Visión</h2>
                         </div>
                         
-                        <p class="text-xl md:text-2xl font-medium leading-relaxed">
-                            Acompañe a cada persona su propio proceso de 
-                            transformación.
-                        </p>
-                        
-                        <!-- Highlighted Quote -->
-                        <div class="bg-gradient-to-r from-red-600/20 to-transparent p-6 rounded-lg border-l-4 border-red-600 mt-8">
-                            <p class="text-xl md:text-2xl font-bold text-white italic">
-                                "Entrenar es crecer. En Gorila Roots lo hacemos 
-                                juntos, con compromiso, respeto y pasión."
+                        <div class="vm-text-content">
+                            <p class="vm-paragraph">
+                                Buscamos ser un <strong>referente en el desarrollo físico y emocional</strong> de las personas.
+                            </p>
+                            
+                            <p class="vm-paragraph">
+                                Queremos lograrlo <strong>a través del entrenamiento</strong>, acompañando un camino hacia la autenticidad y la superación personal.
                             </p>
                         </div>
                     </div>
+                    
+                    <!-- Imagen -->
+                    <div class="vm-image-section">
+                        <div class="vm-image-container">
+                            <div class="vm-decoration vm-decoration-1"></div>
+                            <div class="vm-decoration vm-decoration-2"></div>
+                            
+                            <div class="vm-image-frame">
+                                <div class="vm-image-inner">
+                                    <img src="assets/images/Vision.webp" 
+                                         alt="Entrenamiento de boxeo en Gorila Roots" 
+                                         class="vm-image"
+                                         loading="lazy" />
+                                    <div class="vm-image-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <!-- SEPARADOR -->
+            <div class="vm-separator">
+                <div class="vm-separator-line">
+                    <div class="vm-separator-dot"></div>
+                </div>
+            </div>
+            
+            <!-- MISIÓN -->
+            <div class="vm-card mission">
+                <div class="vm-content-grid">
+                    <!-- Imagen -->
+                    <div class="vm-image-section">
+                        <div class="vm-image-container">
+                            <div class="vm-decoration vm-decoration-1"></div>
+                            <div class="vm-decoration vm-decoration-2"></div>
+                            
+                            <div class="vm-image-frame">
+                                <div class="vm-image-inner">
+                                    <img src="assets/images/childBoxing.webp" 
+                                         alt="Entrenamiento en equipo en Gorila Roots" 
+                                         class="vm-image"
+                                         loading="lazy" />
+                                    <div class="vm-image-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido -->
+                    <div class="vm-content">
+                        <div class="vm-header">
+                            <div class="vm-accent-line"></div>
+                            <h2 class="vm-title mission">Misión</h2>
+                        </div>
+                        
+                        <div class="vm-text-content">
+                            <p class="vm-paragraph">
+                                Formar una <strong>comunidad</strong> que mediante:
+                            </p>
+                            
+                            <!-- Lista compacta -->
+                            <div class="vm-list">
+                                <div class="vm-list-item">
+                                    <div class="vm-bullet"></div>
+                                    <p class="vm-list-text">Las artes de combate</p>
+                                </div>
+                                <div class="vm-list-item">
+                                    <div class="vm-bullet"></div>
+                                    <p class="vm-list-text">El movimiento físico</p>
+                                </div>
+                                <div class="vm-list-item">
+                                    <div class="vm-bullet"></div>
+                                    <p class="vm-list-text">El trabajo en equipo</p>
+                                </div>
+                            </div>
+                            
+                            <p class="vm-paragraph">
+                                Acompañe a cada persona en <strong>su proceso de transformación</strong>.
+                            </p>
+                            
+                            <!-- Quote compacta -->
+                            <div class="vm-quote">
+                                <p class="vm-quote-text">
+                                    "Entrenar es crecer. En Gorila Roots lo hacemos juntos."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
-
 
 
 
@@ -653,7 +642,7 @@
                 ¿Querés conocer más sobre nuestros instructores y sus metodologías de entrenamiento?
             </p>
             <a href="https://www.instagram.com/gorila.roots/" target="_blank">
-                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <button class="bg-red-700 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
                     CONOCÉ AL EQUIPO
                 </button>
             </a>
@@ -687,7 +676,7 @@
                 <div class="w-16 h-1 bg-red-600"></div>
                 <h2 class="text-5xl md:text-6xl font-bold">
                     <span class="text-white">NUESTROS</span> 
-                    <span class="text-red-600">HORARIOS</span>
+                    <span class="text-red-700">HORARIOS</span>
                 </h2>
                 <div class="w-16 h-1 bg-red-600"></div>
             </div>
@@ -1131,13 +1120,14 @@
         <!-- Content Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Contact Form -->
+            <!-- Contact Form -->
             <div class="order-2 lg:order-1">
                 <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8">
                     <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
                         <i class="fas fa-envelope text-red-600 mr-3"></i>
                         Envianos un Mensaje
                     </h3>
-                    
+
                     <form id="contact-form" class="space-y-6">
                         <!-- Name Field -->
                         <div class="space-y-2">
