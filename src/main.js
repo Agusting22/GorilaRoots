@@ -1,8 +1,3 @@
-/**
- * ===================================
- * GORILA ROOTS - JAVASCRIPT LIMPIO SIN EFECTOS PESADOS
- * ===================================
- */
 
 // ===== CONFIGURACIÓN GLOBAL =====
 const CONFIG = {
@@ -455,7 +450,6 @@ class GorilaRootsApp {
   initializeApp() {
     console.log("🦍 Gorila Roots website loaded successfully!")
 
-    // Initialize managers (sin efectos pesados)
     this.managers.navbar = new NavbarManager()
     this.managers.animation = new AnimationManager()
     this.managers.form = new FormManager()

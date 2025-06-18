@@ -1,6 +1,3 @@
-/* ===================================
-   GORILA ROOTS - CSS ORGANIZADO Y LIMPIO
-   ================================= */
 
 /* ===== 1. RESET Y VARIABLES GLOBALES ===== */
 * {
@@ -517,7 +514,7 @@ section:nth-child(even) {
   font-weight: 400;
 }
 
-/* Sección del logo rediseñada */
+/* Sección del logo */
 .logo-section {
   position: relative;
   display: flex;
@@ -1255,7 +1252,7 @@ button:hover {
 
 /* ===== 9. RESPONSIVE DESIGN ===== */
 
-/* Móviles muy pequeños (hasta 374px) */
+
 @media (max-width: 374px) {
   body {
     padding-top: 70px;

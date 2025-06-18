@@ -17,10 +17,9 @@
         <div class="flex items-center justify-between">
 <!-- Logo -->
 <div class="flex items-center space-x-3">
-    <a href="#home" class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-        <img src="assets/images/logo.webp" alt="Gorila Roots Logo" class="w-8 h-8 object-contain">
+    <a href="#home" class="w-36 h-16 flex items-center justify-center">
+        <img src="assets/images/GORILA ROOTS.webp" alt="Gorila Roots Logo" class="w-[450px] h-[150px]">
     </a>
-    <span class="text-white font-bold text-xl hidden sm:block">GORILA ROOTS</span>
 </div>
 
 
@@ -182,7 +181,6 @@
         </div>
     </section>
 <!--!--------------------------------------- SOBRE NOSOTROS SECCION-->
-<!-- SECCIÓN SOBRE NOSOTROS -->
 <section id="nosotros" class="about-section">
 
     <div class="about-container">
@@ -208,14 +206,19 @@
                         </div>
                         
                         <!-- Timeline Item 2 -->
-                        <div class="timeline-item" tabindex="0">
+                        <div class="hidden md:block timeline-item" tabindex="0">
                             <p class="timeline-text">
                                 Somos un <strong>centro deportivo especializado</strong> en disciplinas de combate y preparación física integral, diseñado para atletas de todos los niveles.
                             </p>
                         </div>
+                        <div class="md:hidden   timeline-item" tabindex="0">
+                            <p class="timeline-text">
+                                Somos un <strong>centro deportivo especializado</strong> en disciplinas de combate y preparación física para todos los niveles, con la misión de acercar a las personas el movimiento y el deporte a las personas, promoviendo valores que impulsan el crecimiento personal y comunitario.
+                            </p>
+                        </div>
                         
                         <!-- Timeline Item 3 -->
-                        <div class="timeline-item" tabindex="0">
+                        <div class="hidden md:block timeline-item" tabindex="0">
                             <p class="timeline-text">
                                 Este proyecto nace con la <strong>misión de acercar a las personas</strong> al movimiento y al deporte, promoviendo valores esenciales para el crecimiento personal y comunitario.
                             </p>
@@ -279,7 +282,7 @@
 
 <!--!-------------------------------------VISION Y MISION SECCION--------------->
 
-<!-- SECCIÓN VISIÓN Y MISIÓN COMPACTA -->
+
 <section id="vision-mision" class="vision-mission-section">
     <div class="vm-container">
         <div class="vm-layout">
@@ -404,7 +407,6 @@
 
 
 <!--!-------------------------------------- SECCION DE VIDEOS----------------------->
-<!-- Actividades Section with Video Loops -->
 <section id="actividades" class="bg-[#050a1f] py-16">
     <div class="container mx-auto px-4">
         <!-- Section Title -->
@@ -424,7 +426,7 @@
                     playsinline
                     muted 
                     loop 
-                    preload="none">
+                    preload="auto">
                     <source src="assets/images/videos/Jiu-Jitsu.mp4" type="video/mp4">
                 </video>
                 
@@ -527,7 +529,7 @@
 </section>
 
 <!--!---------------------------------------PROFESORES------------------------->
-<!-- Profesores Section - Dos Profesores Centrados -->
+
 <section id="profesores" class="bg-[#050a1f] py-20 relative overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0">
@@ -555,10 +557,6 @@
                 </h2>
                 <div class="w-16 h-1 bg-red-600"></div>
             </div>
-            <p class="text-gray-300 text-xl max-w-3xl mx-auto">
-                Conocé a nuestro equipo de instructores expertos, cada uno especializado en diferentes disciplinas 
-                y comprometido con tu crecimiento personal y deportivo.
-            </p>
         </div>
         
 <!-- Profesores Grid - Centrado con 2 columnas -->
@@ -573,7 +571,7 @@
                                 <!-- Placeholder for image -->
                                 <div class="w-full h-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
                                     <div class="text-slate-400 text-center">
-                                        <img src="assets/images/PrimerProfe.webp" class="object-cover" alt="">
+                                        <img src="assets/images/primmerprofe.webp" class="object-cover" alt="">
                                     </div>
                                 </div>
                                 <!-- Overlay effect -->
@@ -608,7 +606,7 @@
                                 <!-- Placeholder for image -->
                                 <div class="w-full h-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
                                     <div class="text-slate-400 text-center">
-                                        <img src="assets/images/SegundoProfe.webp"  alt="">
+                                        <img src="assets/images/segundopprofe.webp"  alt="">
                                     </div>
                                 </div>
                                 <!-- Overlay effect -->
@@ -651,7 +649,6 @@
 </section>
 
 <!--!------------------------------GRILLA HORARIOS---------------->
-<!-- Horarios Section -->
 <section id="horarios" class="bg-[#050a1f] py-20 relative overflow-hidden">
     <!-- Background Effects -->
  <!--    <div class="absolute inset-0">
@@ -892,9 +889,13 @@
                         <div class="w-4 h-4 bg-green-600 rounded-full"></div>
                         <span class="text-gray-300">BJJ (Brazilian Jiu-Jitsu)</span>
                     </div>
-                    <div class="flex items-center space-x-3">
+                    <div class="flex lg:hidden items-center space-x-3">
                         <div class="w-4 h-4 bg-red-600 rounded-full"></div>
                         <span class="text-gray-300">Boxeo</span>
+                    </div>
+                    <div class=" hidden lg:flex items-center space-x-3">
+                        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+                        <span class="text-gray-300" style="margin-left: 7vh;">Boxeo</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div class="w-4 h-4 bg-purple-600 rounded-full"></div>
@@ -1083,7 +1084,6 @@
 
 <!--!-----------------------------FORMULARIO CONTACTO------------------------->
 
-<!-- Contacto Section -->
 <section id="contacto" class="bg-[#050a1f] py-20 relative overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0">
@@ -1263,7 +1263,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold">WhatsApp</h4>
-                                <p class="text-gray-300">+54 11 1234-5678</p>
+                                <p class="text-gray-300">+54 11 6413-0321</p>
                                 <p class="text-green-400 text-sm">Respuesta inmediata</p>
                             </div>
                         </div>
@@ -1275,7 +1275,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold">Email</h4>
-                                <p class="text-gray-300">info@gorilaroots.com</p>
+                                <p class="text-gray-300">gorilarootsbjj@gmail.com</p>
                                 <p class="text-blue-400 text-sm">Respuesta en 24hs</p>
                             </div>
                         </div>
@@ -1287,7 +1287,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold">Instagram</h4>
-                                <p class="text-gray-300">@gorilaroots</p>
+                                <p class="text-gray-300">@gorila.roots</p>
                                 <p class="text-purple-400 text-sm">Seguinos para novedades</p>
                             </div>
                         </div>
@@ -1304,11 +1304,11 @@
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
                             <span class="text-gray-300">Lunes a Viernes</span>
-                            <span class="text-white font-semibold">18:00 - 22:00</span>
+                            <span class="text-white font-semibold">09:00 - 19:00</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-300">Sábados</span>
-                            <span class="text-white font-semibold">09:00 - 13:00</span>
+                            <span class="text-white font-semibold">09:00 - 14:00</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-300">Domingos</span>
