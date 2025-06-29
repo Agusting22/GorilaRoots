@@ -18,7 +18,7 @@
 <!-- Logo -->
 <div class="flex items-center space-x-3">
     <a href="#home" class="w-36 h-16 flex items-center justify-center">
-        <img src="assets/images/GORILA ROOTS.webp" alt="Gorila Roots Logo" class="w-[450px] h-[150px]">
+        <img src="assets/images/GORILA ROOTS.webp" alt="Gorila Roots Logo" class="w-[600px] h-[150px]">
     </a>
 </div>
 
@@ -50,7 +50,7 @@
                 <a href="mailto:gorilarootsbjj@gmail.com" class=" w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fas fa-envelope text-white"></i>
                 </a>
-                <a href="https://wa.me/1234567890" target="_blank" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <a href="https://wa.me/1164130321" target="_blank" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fab fa-whatsapp text-white"></i>
                 </a>
                 <a href="https://www.instagram.com/gorila.roots/" target="_blank" class="w-10 h-10 bg-purple-500 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 ">
@@ -93,71 +93,105 @@
 
 
     <!--! HERO SECCION -->
-<section id="home" class=" hero-bg min-h-screen flex items-center relative">
-    <div class="container mx-auto px-4 py-20">
-        <div class="max-w-4xl mx-auto text-center space-y-12">
-            <!-- Main titulo con imagen responsive -->
-            <div class="space-y-6">
-                <div class="hero-title-container">
-                    <img 
-                        src="assets/images/Gorila-title.png" 
-                        class="hero-title-image" 
-                        alt="Gorila Roots - Centro Deportivo"
-                        loading="eager"
-                        decoding="async"
-                    >
+<section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+        <!-- Slider de imágenes de fondo -->
+        <div class="hero-slider z-10">
+            <img src="/assets/images/slider-img1-1.jpg" 
+                 alt="Entrenamiento de boxeo" class="slider-image">
+            <img src="/assets/images/slider-img2.webp" 
+                 alt="Entrenamiento de jiu jitsu" class="slider-image">
+            <img src="/assets/images/slider-img3.webp" 
+                 alt="Gimnasio y entrenamiento físico" class="slider-image">
+            <img src="/assets/images/slider-img4.jpg" 
+                 alt="Artes marciales" class="slider-image">
+        </div>
+        <div class="block md:hidden hero-slider z-10">
+            <img src="/assets/images/sliderphone-img.webp" 
+                 alt="Entrenamiento de boxeo" class="slider-image">
+            <img src="/assets/images/sliderphone-img2.webp" 
+                 alt="Entrenamiento de jiu jitsu" class="slider-image">
+            <img src="/assets/images/sliderphone-img3.webp" 
+                 alt="Gimnasio y entrenamiento físico" class="slider-image">
+            <img src="/assets/images/sliderphone-img4.webp" 
+                 alt="Artes marciales" class="slider-image">
+        </div>
+
+        <!-- Overlay oscuro con gradiente -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/80 z-20"></div>
+
+        <!-- Contenido del hero -->
+        <div class="container mx-auto px-4 py-20 relative z-20">
+            <div class=" max-w-4xl mx-auto text-center space-y-12">
+                <!-- Main titulo con imagen responsive -->
+                <div class="space-y-6">
+                    <div class="flex justify-center items-center mb-8 fade-in">
+                        <img 
+                            src="/assets/images/Gorila-title.png" 
+                            class="hero-title-image w-96" 
+                            alt="Gorila Roots - Centro Deportivo"
+                            loading="eager"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <h2 class="text-2xl md:text-4xl font-bold text-white leading-tight fade-in fade-in-delay-1">
+                        ENTRENAMOS CUERPO, MENTE<br>
+                        Y ESPÍRITU DE LUCHA.
+                    </h2>
                 </div>
 
-                <h2 class="hero-subtitle text-2xl md:text-4xl font-bold text-white leading-tight fade-in fade-in-delay-1">
-                    ENTRENAMOS CUERPO, MENTE<br>
-                    Y ESPÍRITU DE LUCHA.
-                </h2>
-            </div>
+                <!-- Texto HERO -->
+                <div class="space-y-8 fade-in fade-in-delay-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">CENTRO DEPORTIVO:</h3>
 
-            <!-- Texto HERO -->
-            <div class="space-y-8 fade-in fade-in-delay-2">
-                <h3 class="text-2xl md:text-3xl font-bold text-white">CENTRO DEPORTIVO:</h3>
-
-                <div class="sports-grid grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-                    <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
-                            <div class="w-4 h-4 bg-white rounded-full"></div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                        <div class="flex items-center space-x-3 text-white cursor-pointer hover:transform hover:-translate-y-1 transition-all duration-300 hover:brightness-125">
+                            <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">Jiu Jitsu</span>
                         </div>
-                        <span class="text-lg font-medium">Jiu Jitsu</span>
-                    </div>
 
-                    <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
-                            <div class="w-4 h-4 bg-white rounded-full"></div>
+                        <div class="flex items-center space-x-3 text-white cursor-pointer hover:transform hover:-translate-y-1 transition-all duration-300 hover:brightness-125">
+                            <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">No-Gi</span>
                         </div>
-                        <span class="text-lg font-medium">No-Gi</span>
-                    </div>
 
-                    <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
-                            <div class="w-4 h-4 bg-white rounded-full"></div>
+                        <div class="flex items-center space-x-3 text-white cursor-pointer hover:transform hover:-translate-y-1 transition-all duration-300 hover:brightness-125">
+                            <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">Boxeo</span>
                         </div>
-                        <span class="text-lg font-medium">Boxeo</span>
-                    </div>
 
-                    <div class="sport-item flex items-center space-x-3 text-white cursor-pointer">
-                        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
-                            <div class="w-4 h-4 bg-white rounded-full"></div>
+                        <div class="flex items-center space-x-3 text-white cursor-pointer hover:transform hover:-translate-y-1 transition-all duration-300 hover:brightness-125">
+                            <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-lg font-medium">Físico</span>
                         </div>
-                        <span class="text-lg font-medium">Físico</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- boton de contacto -->
-            <div class="pt-8 fade-in fade-in-delay-3">
-                <button id="contact-btn" class="bg-red-700 hover:bg-red-700 text-white px-12 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                    CONTÁCTANOS
-                </button>
+                <!-- boton de contacto -->
+                <div class="pt-8 fade-in fade-in-delay-3">
+                    <button  class="bg-red-700 hover:bg-red-800 text-white px-12 py-4 text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-lg transform hover:-translate-y-1">
+                        <a href="https://wa.me/1164130321" target="_blank" >CONTÁCTANOS</a>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+
+        <!-- Indicadores del slider -->
+        <div class="slider-indicators">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </section>
 
     <!-- Banner HERO -->
     <section class="bg-red-700 py-3">
@@ -796,8 +830,8 @@
                     </div>
                     <div class="p-4 space-y-3">
                         <div class="flex justify-between items-center p-3 bg-green-600/10 border border-green-600/30 rounded-lg">
-                            <span class="text-gray-300 font-medium">19:30 - 21:00</span>
-                            <span class="text-green-300 font-semibold">BJJ</span>
+                            <span class="text-gray-300 font-medium">19:30 - 20:30</span>
+                            <span class="text-green-300 font-semibold">B0XE0</span>
                         </div>
                         <div class="flex justify-between items-center p-3 bg-red-600/10 border border-red-600/30 rounded-lg">
                             <span class="text-gray-300 font-medium">21:00 - 22:00</span>
@@ -805,7 +839,8 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- sacar gorila de las fotos profesores -->
+                 <!-- cambiar fotos por las de kimonos -->
                 <!-- Martes -->
                 <div class="bg-slate-800/30 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
                     <div class="bg-gradient-to-r from-red-600 to-red-700 p-4">
@@ -1014,7 +1049,7 @@
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-white mb-2">Dirección</h3>
-                            <p class="text-gray-300 text-lg">Country Club Infantil de Banfield</p>
+                            <p class="text-gray-300 text-lg">Belgrano 1783</p>
                             <p class="text-gray-400">Banfield, Buenos Aires, Argentina</p>
                         </div>
                     </div>
@@ -1128,7 +1163,7 @@
                         Envianos un Mensaje
                     </h3>
 
-                    <form id="contact-form" class="space-y-6">
+                    <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xpwrkbkk" method="post">
                         <!-- Name Field -->
                         <div class="space-y-2">
                             <label for="name" class="block text-gray-300 font-medium">
@@ -1304,11 +1339,11 @@
                     <div class="space-y-3">
                         <div class="flex justify-between items-center">
                             <span class="text-gray-300">Lunes a Viernes</span>
-                            <span class="text-white font-semibold">09:00 - 19:00</span>
+                            <span class="text-white font-semibold">18:30 - 22:00</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-300">Sábados</span>
-                            <span class="text-white font-semibold">09:00 - 14:00</span>
+                            <span class="text-white font-semibold">Cerrado</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-300">Domingos</span>
