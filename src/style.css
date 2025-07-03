@@ -1957,3 +1957,202 @@ button:hover {
             31.25% { background: rgba(255, 255, 255, 0.5); transform: scale(1); }
             100% { background: rgba(255, 255, 255, 0.5); transform: scale(1); }
         }
+
+
+
+
+
+/* ===================================
+FAQ
+   ================================= */
+
+/* Contenedor principal del FAQ */
+.faq-item {
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.faq-item:hover {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: rgba(220, 38, 38, 0.2);
+  transform: translateX(5px);
+}
+
+/* Pregunta del FAQ */
+.faq-question {
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  color: white !important;
+}
+
+.faq-question:hover i {
+  transform: rotate(90deg);
+  color: #ef4444;
+}
+
+/* Respuesta del FAQ */
+.faq-answer {
+  position: relative;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border-left: 3px solid rgba(220, 38, 38, 0.5);
+  margin-top: 0.75rem;
+  margin-left: 1.5rem;
+}
+
+.faq-answer::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -3px;
+  width: 3px;
+  height: 16px;
+  background: linear-gradient(180deg, transparent, rgba(220, 38, 38, 0.5));
+  border-radius: 2px;
+}
+
+/* Estilos para listas en respuestas */
+.faq-answer ul {
+  margin: 0.5rem 0;
+}
+
+.faq-answer li {
+  margin: 0.25rem 0;
+  padding-left: 0.5rem;
+}
+
+.faq-answer li::marker {
+  color: rgba(220, 38, 38, 0.7);
+}
+
+/* Texto destacado en respuestas */
+.faq-answer strong {
+  font-weight: 600;
+}
+
+.faq-answer em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Separador del call to action */
+.faq-item + .faq-item {
+  border-top: 1px solid rgba(71, 85, 105, 0.3);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* Efectos hover para botones del CTA */
+.faq-item a:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Iconos de chevron */
+.faq-question i.fa-chevron-right {
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .faq-answer {
+    margin-left: 1rem;
+    padding: 0.75rem;
+  }
+
+  .faq-answer ul {
+    padding-left: 1rem;
+  }
+
+  .faq-item {
+    padding: 0.75rem;
+  }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInAnswer {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-answer {
+  animation: fadeInAnswer 0.3s ease-out;
+}
+
+/* Mejoras de accesibilidad */
+.faq-question:focus {
+  outline: 2px solid rgba(220, 38, 38, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Estados activos */
+.faq-item.active {
+  background: rgba(220, 38, 38, 0.08);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.faq-item.active .faq-question {
+  color: white;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(90deg);
+  color: #ef4444;
+}
+
+/* Efectos de hover mejorados */
+.faq-item:hover .faq-answer {
+  background: rgba(0, 0, 0, 0.3);
+  border-left-color: rgba(220, 38, 38, 0.7);
+}
+
+/* Estilos para el call to action */
+.faq-cta {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.05));
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faq-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .faq-cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Efectos especiales para destacar información importante */
+.faq-highlight {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.05));
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.faq-highlight strong {
+  color: #ef4444;
+}

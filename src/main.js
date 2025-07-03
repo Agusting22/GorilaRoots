@@ -1,8 +1,8 @@
 
 // ===== CONFIGURACIÓN GLOBAL =====
 const CONFIG = {
-  phoneNumber: "1134804529",
-  email: "ag225966@gmail.com",
+  phoneNumber: "1164130321",
+  email: "gorilasrootsbjj@gmail.com",
   instagram: "https://www.instagram.com/gorila.roots/",
 }
 
@@ -308,7 +308,6 @@ setupFormSubmission() {
     try {
       await this.simulateFormSubmission()
       console.log("Formulario enviado correctamente (o con error ignorado).")
-      // Mostrar mensaje éxito siempre, incluso si simulateFormSubmission lanza error
       this.showMessage("¡Mensaje enviado correctamente! Te responderemos pronto.", "success")
       this.form.reset()
       this.clearValidationClasses()
@@ -510,3 +509,145 @@ class GorilaRootsApp {
 
 // ===== START APPLICATION =====
 new GorilaRootsApp()
+
+// Script para FAQ interactivo
+
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq-item")
+
+  // Añadir interactividad a cada FAQ item
+  faqItems.forEach((item, index) => {
+    const question = item.querySelector(".faq-question")
+    const answer = item.querySelector(".faq-answer")
+
+    // Hacer la pregunta clickeable
+    question.addEventListener("click", () => {
+      toggleFAQItem(item, answer)
+    })
+
+    // Añadir soporte para teclado
+    question.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault()
+        toggleFAQItem(item, answer)
+      }
+    })
+
+    // Hacer la pregunta focuseable
+    question.setAttribute("tabindex", "0")
+    question.setAttribute("role", "button")
+    question.setAttribute("aria-expanded", "true")
+    question.setAttribute("aria-controls", `faq-answer-${index}`)
+
+    // Añadir ID a la respuesta
+    answer.setAttribute("id", `faq-answer-${index}`)
+
+    // Animación de entrada escalonada
+    setTimeout(() => {
+      item.style.opacity = "1"
+      item.style.transform = "translateY(0)"
+    }, index * 100)
+  })
+
+  // Función para toggle del FAQ item
+  function toggleFAQItem(item, answer) {
+    const isActive = item.classList.contains("active")
+    const question = item.querySelector(".faq-question")
+
+    if (isActive) {
+      // Cerrar
+      item.classList.remove("active")
+      answer.style.maxHeight = "0"
+      answer.style.opacity = "0"
+      answer.style.marginTop = "0"
+      question.setAttribute("aria-expanded", "false")
+    } else {
+      // Abrir
+      item.classList.add("active")
+      answer.style.maxHeight = answer.scrollHeight + "px"
+      answer.style.opacity = "1"
+      answer.style.marginTop = "0.75rem"
+      question.setAttribute("aria-expanded", "true")
+
+      // Scroll suave hacia el item
+      setTimeout(() => {
+        item.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        })
+      }, 100)
+    }
+  }
+
+  // Inicializar estilos
+  faqItems.forEach((item) => {
+    item.style.opacity = "0"
+    item.style.transform = "translateY(20px)"
+    item.style.transition = "all 0.3s ease"
+  })
+
+  // Efecto hover mejorado
+  faqItems.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      if (!item.classList.contains("active")) {
+        item.style.transform = "translateX(5px)"
+      }
+    })
+
+    item.addEventListener("mouseleave", () => {
+      if (!item.classList.contains("active")) {
+        item.style.transform = "translateX(0)"
+      }
+    })
+  })
+
+  // Analytics tracking (opcional)
+  faqItems.forEach((item, index) => {
+    const question = item.querySelector(".faq-question")
+    question.addEventListener("click", () => {
+      // Aquí puedes añadir tracking de analytics
+      console.log(`FAQ clicked: ${question.textContent.trim()}`)
+    })
+  })
+})
+
+// Función para expandir/contraer todas las FAQs
+function toggleAllFAQs(expand = true) {
+  const faqItems = document.querySelectorAll(".faq-item")
+
+  faqItems.forEach((item) => {
+    const answer = item.querySelector(".faq-answer")
+    const question = item.querySelector(".faq-question")
+
+    if (expand) {
+      item.classList.add("active")
+      answer.style.maxHeight = answer.scrollHeight + "px"
+      answer.style.opacity = "1"
+      answer.style.marginTop = "0.75rem"
+      question.setAttribute("aria-expanded", "true")
+    } else {
+      item.classList.remove("active")
+      answer.style.maxHeight = "0"
+      answer.style.opacity = "0"
+      answer.style.marginTop = "0"
+      question.setAttribute("aria-expanded", "false")
+    }
+  })
+}
+
+// Función para buscar en FAQs (para implementación futura)
+function searchFAQs(searchTerm) {
+  const faqItems = document.querySelectorAll(".faq-item")
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question span").textContent.toLowerCase()
+    const answer = item.querySelector(".faq-answer").textContent.toLowerCase()
+
+    if (question.includes(searchTerm.toLowerCase()) || answer.includes(searchTerm.toLowerCase())) {
+      item.style.display = "block"
+      // Highlight search term (implementación opcional)
+    } else {
+      item.style.display = "none"
+    }
+  })
+}
