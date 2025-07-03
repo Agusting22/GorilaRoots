@@ -36,6 +36,8 @@ const Utils = {
 }
 
 // ===== NAVBAR MANAGER =====
+
+
 class NavbarManager {
   constructor() {
     this.header = document.getElementById("main-header")

@@ -16,15 +16,23 @@
 <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-4 py-4">
         <div class="flex items-center justify-between">
-<!-- Logo -->
-<div class="flex items-center space-x-3">
-    <a href="#home" class="w-36 h-16 flex items-center justify-center">
-        <img src="assets/images/GORILA ROOTS.webp" alt="Gorila Roots Logo" class="w-[600px] h-[150px]">
-    </a>
-</div>
+            <!-- Logo -->
+            <!-- Logo Mobile -->
+            <div class="md:hidden flex items-center space-x-3">
+                <a href="#home" class="w-50 h-12 flex items-center justify-center">
+                    <img src="assets/images/Gorila-title.png" alt="Gorila Roots Logo" class="w-full h-8 object-fill">
+                </a>
+            </div>
+
+            <!-- Logo Desktop -->
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#home" class="w-72 h-20 flex items-center justify-center">
+                    <img src="assets/images/Gorila-title.png" alt="Gorila Roots Logo" class="w-full h-full object-fill">
+                </a>
+            </div>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:hidden lg:flex items-center space-x-8">
+            <nav class="hidden md:hidden  lg:flex items-center space-x-8">
                 <a href="#actividades" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Actividades
                 </a>
@@ -40,28 +48,28 @@
                 <a href="#contacto" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Contacto
                 </a>
+                <a href="#preguntas-frecuentes" class="nav-link md:hidden xl:block text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
+                    Preguntas Frecuentes
+                </a>
                 <a href="#ubicacion" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Ubicación
-                </a>
-                <a href="#preguntas-frecuentes" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
-                    Preguntas Frecuentes
                 </a>
             </nav>
 
             <!-- Social Icons & Mobile Menu Button -->
             <div class="flex items-center space-x-3">
-                <a href="mailto:gorilarootsbjj@gmail.com" class=" w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <a href="mailto:info@gorilaroots.com" target="_blank" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fas fa-envelope text-white"></i>
                 </a>
                 <a href="https://wa.me/1164130321" target="_blank" class="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fab fa-whatsapp text-white"></i>
                 </a>
-                <a href="https://www.instagram.com/gorila.roots/" target="_blank" class="w-10 h-10 bg-purple-500 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 ">
+                <a href="https://www.instagram.com/gorila.roots/" target="_blank" class="w-10 h-10 bg-purple-500 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fab fa-instagram text-white"></i>
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class=" lg:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fas fa-bars text-white"></i>
                 </button>
             </div>
@@ -69,7 +77,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-screen bg-slate-900/95 backdrop-blur-md z-40 md:hidden transform translate-x-full transition-transform duration-300">
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-screen bg-slate-900/95 backdrop-blur-md z-40 lg:hidden transform translate-x-full transition-transform duration-300">
         <div class="flex flex-col items-center justify-center h-full space-y-8 relative">
             <button id="close-menu" class="absolute top-6 right-6 w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300">
                 <i class="fas fa-times text-white"></i>
@@ -82,7 +90,7 @@
                 Horarios
             </a>
             <a href="#nosotros" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
-                Sobre Nosotros
+                Sobre nosotros
             </a>
             <a href="#profesores" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
                 Profesores
@@ -90,15 +98,14 @@
             <a href="#contacto" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
                 Contacto
             </a>
-            <a href="#preguntas-frecuentes" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
-                Preguntas Frecuentes
-            </a>
             <a href="#ubicacion" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
                 Ubicación
             </a>
         </div>
     </div>
 </header>
+
+
 
     <!--! HERO SECCION -->
 <section id="home" class="min-h-screen flex items-center relative overflow-hidden">
@@ -135,7 +142,7 @@
                 <div class="space-y-6">
                     <h2 class="text-2xl md:text-4xl font-bold text-white leading-tight fade-in fade-in-delay-1">
                         ENTRENAMOS CUERPO, MENTE<br>
-                        Y ESPÍRITU DE LUCHA.
+                        Y ESPÍRITU DE LUCHA
                     </h2>
                 </div>
 
@@ -225,6 +232,13 @@
             <span class="text-white">NUESTRAS</span> 
             <span class="text-red-700">ACTIVIDADES</span>
         </h2>
+        <!-- Mobile Instructions Text -->
+        <div class="md:hidden text-center mb-8">
+            <p class="text-gray-300 text-lg font-medium bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/50 p-4 mx-auto max-w-sm">
+                <i class="fas fa-hand-pointer text-red-600 mr-2"></i>
+                Hace click sobre el video para saber más
+            </p>
+        </div>
         
         <!-- Video Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -245,7 +259,7 @@
                 <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6">
                     <h3  class="text-white text-2xl font-bold mb-4 text-center">Jiu Jitsu</h3>
                     <p class="text-white text-center">
-                        Aprendé Este Apasionante Arte Marcial Basada En Los Principios De Derribar, Controlar Y Someter A Un Oponente Mediante El Uso De Agarres Y Palancas
+                        Aprendé este apasionante arte marcial basada en los principios de derribar, controlar y someter a un oponente mediante el uso de agarres y palancas
                     </p>
                 </div>
                 
