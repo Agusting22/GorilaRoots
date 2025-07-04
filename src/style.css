@@ -280,7 +280,6 @@ section:nth-child(even) {
 }
 
 /* ===== 5. SECCIÓN SOBRE NOSOTROS ===== */
-/* Container principal con grid avanzado */
 .about-container {
   position: relative;
   z-index: 2;
@@ -470,6 +469,8 @@ section:nth-child(even) {
 }
 
 /* Caja de misión rediseñada */
+
+
 .mission-box {
   background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.05));
   border: 2px solid rgba(220, 38, 38, 0.3);
