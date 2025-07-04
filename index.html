@@ -18,21 +18,21 @@
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <!-- Logo Mobile -->
-            <div class="md:hidden flex items-center space-x-3">
+            <div class="xl:hidden items-center space-x-3">
                 <a href="#home" class="w-50 h-12 flex items-center justify-center">
                     <img src="assets/images/Gorila-title.png" alt="Gorila Roots Logo" class="w-full h-8 object-fill">
                 </a>
             </div>
 
             <!-- Logo Desktop -->
-            <div class="hidden md:flex items-center space-x-3">
+            <div class="hidden xl:flex items-center space-x-3">
                 <a href="#home" class="w-72 h-20 flex items-center justify-center">
                     <img src="assets/images/Gorila-title.png" alt="Gorila Roots Logo" class="w-full h-full object-fill">
                 </a>
             </div>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:hidden  lg:flex items-center space-x-8">
+            <nav class="hidden lg:flex  items-center space-x-8">
                 <a href="#actividades" class="nav-link text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative py-2">
                     Actividades
                 </a>
@@ -69,7 +69,7 @@
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <button id="mobile-menu-btn" class="xl:hidden w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <i class="fas fa-bars text-white"></i>
                 </button>
             </div>
@@ -77,7 +77,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-screen bg-slate-900/95 backdrop-blur-md z-40 lg:hidden transform translate-x-full transition-transform duration-300">
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-screen bg-slate-900/95 backdrop-blur-md z-40 xl:hidden transform translate-x-full transition-transform duration-300">
         <div class="flex flex-col items-center justify-center h-full space-y-8 relative">
             <button id="close-menu" class="absolute top-6 right-6 w-10 h-10 bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center transition-all duration-300">
                 <i class="fas fa-times text-white"></i>
@@ -97,6 +97,9 @@
             </a>
             <a href="#contacto" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
                 Contacto
+            </a>
+            <a href="#preguntas-frecuentes" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
+                Preguntas frecuentes
             </a>
             <a href="#ubicacion" class="mobile-nav-link text-white text-xl font-medium hover:text-red-400 transition-all duration-300 relative py-2">
                 Ubicación
@@ -121,7 +124,7 @@
                  alt="Artes marciales" class="slider-image">
         </div>
 
-        <div class="block md:hidden hero-slider z-10">
+        <div class="block lg:hidden hero-slider z-10">
             <img src="/assets/images/sliderphone-img.webp" 
                  alt="Entrenamiento de boxeo" class="slider-image">
             <img src="/assets/images/sliderphone-img2.webp" 
